@@ -29,6 +29,7 @@ function Navbar() {
     };
   }, [isOpen]);
 
+
   return (
     <>
       <div className="navbar-container w-full px-6 pt-2 md:px-40 flex flex-col relative">
@@ -60,12 +61,18 @@ function Navbar() {
         >
           <div className="flex flex-col items-start p-6 gap-4">
             {/* Mobile Links */}
-            <Link className="roberto text-base font-bold hover:opacity-40" to="/" onClick={toggle}>Home</Link>
+           <Link className="roberto text-base font-bold hover:opacity-40" to="/" onClick={toggle}>Home</Link>
+            <div className="my-2 h-px bg-black w-full" />
             <Link className="roberto text-base font-bold hover:opacity-40" to="/blog" onClick={toggle}>Blog</Link>
+            <div className="my-2 h-px bg-black w-full" />
             <Link className="roberto text-base font-bold hover:opacity-40" to="/blog" onClick={toggle}>Phd/Interns</Link>
+            <div className="my-2 h-px bg-black w-full" />
             <Link className="roberto text-base font-bold hover:opacity-40" to="/publications" onClick={toggle}>Publishments</Link>
+            <div className="my-2 h-px bg-black w-full" />
             <Link className="roberto text-base font-bold hover:opacity-40" to="/blog" onClick={toggle}>Contact us</Link>
+            <div className="my-2 h-px bg-black w-full" />
             <Link className="roberto text-base font-bold hover:opacity-40" to="/about" onClick={toggle}>About Me</Link>
+            <div className="my-2 h-px bg-black w-full" />
           </div>
         </div>
 
