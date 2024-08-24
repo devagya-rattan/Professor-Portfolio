@@ -7,102 +7,104 @@ import { Link } from 'react-router-dom';
 
 const Footer = () => {
   return (
-    <footer className="bg-black text-white py-8 px-4 lg:px-24">
+    <footer className="bg-black text-white py-4 px-4 lg:px-24 min-h-[20vh] flex flex-col justify-between">
       <div className="lg:flex lg:justify-between">
         {/* Contact Info */}
-        <div className="mb-8 lg:mb-0">
-          <h3 className="text-lg">Arun Kumar Verma</h3>
-          <p className="text-sm">Associate Professor</p>
-          <p className="text-sm">Department of Electrical Engineering</p>
+        <div className="mb-4 lg:mb-0">
+          <h3 className="text-base">Arun Kumar Verma</h3>
+          <p className="text-xs">Associate Professor</p>
+          <p className="text-xs">Department of Electrical Engineering</p>
         </div>
+
+        <hr className="border-gray-500 my-4" />
 
         {/* Social Media Icons */}
-        <div className="flex justify-center space-x-4 mb-8 lg:mb-0">
+        <div className="flex justify-center space-x-3 mb-4 lg:mb-0">
           <a href="">
-            <FaLinkedinIn className="hieght-width text-white hover:opacity-40" />
+            <FaLinkedinIn className="h-5 w-5 text-white hover:opacity-40" />
           </a>
           <a href="">
-            <BiLogoGmail className="hieght-width hover:opacity-40" />
+            <BiLogoGmail className="h-5 w-5 hover:opacity-40" />
           </a>
           <a href="">
-            <RiFacebookFill className="hieght-width text-white hover:opacity-40" />
+            <RiFacebookFill className="h-5 w-5 text-white hover:opacity-40" />
           </a>
           <a href="">
-            <FaTwitter className="hieght-width text-white hover:opacity-40" />
+            <FaTwitter className="h-5 w-5 text-white hover:opacity-40" />
           </a>
         </div>
       </div>
 
-      <hr className="border-gray-500 my-8" />
+      <hr className="border-gray-500 my-4" />
 
       {/* Navigation Links */}
-      <div className="lg:flex lg:flex-col lg:items-start lg:space-y-4">
-        <div className="flex justify-center space-x-8 mb-4 lg:mb-0">
-          <a href="/home" className="text-sm">
+      <div className="lg:flex lg:flex-col lg:items-start lg:space-y-2">
+        <div className="flex justify-center space-x-6 mb-2 lg:mb-0">
+          <Link to="/home" className="text-xs">
             Home
-          </a>
-          <a href="/blog" className="text-sm">
+          </Link>
+          <Link to="/blog" className="text-xs">
             Blog
-          </a>
-          <a href="/phd" className="text-sm">
-            Phd
-          </a>
+          </Link>
+          <Link to="/phd" className="text-xs">
+            PhD
+          </Link>
         </div>
-        <div className="flex justify-center space-x-8 mb-4 lg:mb-0">
-          <a href="/publications" className="text-sm">
+        <div className="flex justify-center space-x-6 mb-2 lg:mb-0">
+          <Link to="/publications" className="text-xs">
             Publications
-          </a>
-          <a href="/contact" className="text-sm">
+          </Link>
+          <Link to="/contact" className="text-xs">
             Contact
-          </a>
-          <a href="/about" className="text-sm">
+          </Link>
+          <Link to="/about" className="text-xs">
             About
-          </a>
+          </Link>
         </div>
-        <div className="flex justify-center space-x-8">
-          <a href="/google-scholar" className="text-sm">
+        <div className="flex justify-center space-x-6">
+          <Link to="/google-scholar" className="text-xs">
             Google Scholar
-          </a>
-          <a href="/about" className="text-sm">
+          </Link>
+          <Link to="/about" className="text-xs">
             About
-          </a>
-          <a href="/events" className="text-sm">
+          </Link>
+          <Link to="/events" className="text-xs">
             Events
-          </a>
+          </Link>
         </div>
       </div>
 
-      <hr className="border-gray-500 my-8" />
+      <hr className="border-gray-500 my-4" />
 
       {/* Query Form */}
       <div className="lg:flex lg:justify-between">
-        <div className="mb-4">
-          <p className="text-center text-sm mb-4">
+        <div className="mb-2">
+          <p className="text-center text-xs mb-2">
             If You have any Queries feel free to Ask Here
           </p>
-          <form className="space-y-4">
+          <form className="space-y-2">
             <input
               type="text"
               placeholder="First Name"
-              className="w-full p-2 bg-black border border-white text-white"
+              className="w-full p-1 bg-black border border-white text-white text-xs"
             />
             <input
               type="text"
               placeholder="Last Name"
-              className="w-full p-2 bg-black border border-white text-white"
+              className="w-full p-1 bg-black border border-white text-white text-xs"
             />
             <input
               type="email"
               placeholder="Email"
-              className="w-full p-2 bg-black border border-white text-white"
+              className="w-full p-1 bg-black border border-white text-white text-xs"
             />
             <textarea
               placeholder="Enter Your Queries here"
-              className="w-full p-2 bg-black border border-white text-white"
+              className="w-full p-1 bg-black border border-white text-white text-xs"
             ></textarea>
             <button
               type="submit"
-              className="w-full p-2 border border-white hover:bg-white hover:text-black"
+              className="w-full p-1 border border-white hover:bg-white hover:text-black text-xs"
             >
               Submit
             </button>
@@ -110,10 +112,10 @@ const Footer = () => {
         </div>
       </div>
 
-      <hr className="border-gray-500 my-8" />
+      <hr className="border-gray-500 my-4" />
 
       {/* Footer Credits */}
-      <div className="text-center text-xs">
+      <div className="text-center text-xxs">
         © Trikor Technologia. All rights reserved. | Designed and developed by
         Trikor Technologia.
       </div>
