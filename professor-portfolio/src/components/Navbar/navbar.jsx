@@ -34,8 +34,8 @@ function Navbar() {
       <div className="navbar-container w-full px-6 pt-2 md:px-40 flex flex-col relative">
         <div className="flex flex-row h-14 justify-between items-center">
           <div className="flex-col">
-            <h5 className="timesnowroman lg:text-5xl md:text-4xl text-3xl font-extrabold">
-              Arun Verma kumar
+            <h5 className="timesnowroman lg:text-5xl md:text-4xl text-2xl font-extrabold">
+              Arun Kumar Verma 
             </h5>
           </div>
           <div className="hidden xl:flex space-x-3">
