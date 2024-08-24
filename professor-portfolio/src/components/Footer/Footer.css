@@ -1,0 +1,425 @@
+/* font-family: "Roboto Condensed", sans-serif; */
+.footer {
+    height: 800px;
+}
+
+.fonttt-size {
+    font-size: 1.125rem
+        /* 18px */
+    ;
+    line-height: 1.75rem
+        /* 28px */
+    ;
+}
+
+.flix-400 {
+    display: flex;
+    flex-direction: column;
+
+}
+
+/* flex lg:flex-row md:flex-col sm:flex-col */
+
+.list-form {
+    padding-top: 20px
+        /* 40px */
+    ;
+    padding-left: 1.75rem
+        /* 28px */
+    ;
+    padding-right: 1.5rem
+        /* 24px */
+    ;
+}
+
+.padding-copy {
+    padding-top: 24px;
+    
+}
+
+.hieght-width {
+    height: 6rem;
+    width: 1.5rem;
+    padding: 2px;
+}
+
+.linegrey {
+
+    height: 2px;
+}
+
+.texting {
+    font-family: "Roboto Condensed", sans-serif;
+}
+
+.lineone {
+    height: 1px;
+}
+
+
+
+.query-form {
+    padding-bottom: 0.5rem
+        /* 8px */
+    ;
+    padding-top: 1.75rem
+        /* 28px */
+    ;
+    padding-right: 5rem
+        /* 80px */
+    ;
+    padding-left: 3.5rem
+        /* 56px */
+    ;
+}
+
+/* .space-x-container {
+    display: flex;
+    gap: 2.5rem;
+    padding-bottom: 26px;
+   
+} */
+
+@media (min-width: 1024px) {
+    .footer {
+        height: 600px;
+      
+
+    }
+    .line{
+        height: 1px;
+        background-color: grey;
+    }
+    .padding-copy {
+        margin-top: 44px;
+    }
+    .query-form {
+        padding-bottom: 0.5rem
+            /* 8px */
+        ;
+        padding-top: 18px
+            /* 28px */
+        ;
+        padding-right: 5rem
+            /* 80px */
+        ;
+        padding-left: 3.5rem
+            /* 56px */
+        ;
+    }
+.tagg{
+    margin-top: 1rem;
+}
+    .list-form {
+        padding-top: 0.5rem
+            /* 40px */
+        ;
+        padding-left: 1.75rem
+            /* 28px */
+        ;
+        padding-right: 1.5rem
+            /* 24px */
+        ;
+    }
+
+    .flix-400 {
+        display: flex;
+        flex-direction: column;
+
+
+    }
+
+    .heightc3 {
+        height: 350px;
+       
+    }
+
+
+    .space-x-containera {
+        display: flex;
+        gap: 110px;
+        padding-left: 14px;
+        padding-bottom: 16px;
+        /* 10 * 0.25rem (1rem = 16px by default, so 2.5rem = 40px) */
+    }
+
+    .space-x-containerb {
+        display: flex;
+        gap: 75px;
+        padding-left: 14px;
+        padding-bottom: 16px;
+        /* 10 * 0.25rem (1rem = 16px by default, so 2.5rem = 40px) */
+    }
+
+    .space-x-containerc {
+        display: flex;
+        gap: 70px;
+        padding-left: 11px;
+        padding-bottom: 16px;
+        /* 10 * 0.25rem (1rem = 16px by default, so 2.5rem = 40px) */
+    }
+
+    .padding-c32 {
+        margin-right: 13px;
+
+    }
+
+    .padding-copy {
+        padding-top: 24px;
+    }
+}
+
+
+@media (min-width: 768px) {
+    .footer {
+        height: 800px;
+
+    }
+
+    .flix-400 {
+        flex-direction: column;
+        /* flex lg:flex-row md:flex-col sm:flex-col */
+    }
+
+    .heightc3 {
+        height: 580px;
+    }
+
+    .query-form {
+        padding-bottom: 0.5rem
+            /* 8px */
+        ;
+        padding-top: 1.75rem
+            /* 28px */
+        ;
+
+        padding-right: 1rem
+            /* 16px */
+        ;
+        padding-left: 1rem
+            /* 16px */
+        ;
+    }
+
+    .list-form {
+        padding-top: 2.5rem
+            /* 40px */
+        ;
+        padding-left: 1rem;
+        padding-right: 1rem
+            /* 16px */
+        ;
+    }
+
+    .space-x-containera {
+        display: flex;
+        gap: 110px;
+        padding-bottom: 15px;
+
+    }
+
+    .space-x-containerb {
+        display: flex;
+        gap: 72px;
+        padding-bottom: 15px;
+
+    }
+
+    .space-x-containerc {
+        display: flex;
+        gap: 65px;
+        padding-bottom: 15px;
+
+    }
+
+    .padding-copy {
+        padding-top: 38px;
+    }
+
+}
+
+/* @media (min-width: 769px) {
+    .footer {
+        height: 800px;
+
+    }
+
+    .flexx {
+        flex-direction: column;
+    }
+
+    .heightc3 {
+        height: 530px;
+    }
+
+
+} */
+
+
+@media (min-width: 640px) {
+    .footer {
+        height: 700px;
+    }
+
+    .flix-400 {
+        flex-direction: column;
+        /* flex lg:flex-row md:flex-col sm:flex-col */
+    }
+
+    .heightc3 {
+        height: 500px;
+    }
+
+    .query-form {
+        padding-bottom: 0.5rem
+            /* 8px */
+        ;
+        padding-top: 1.75rem
+            /* 28px */
+        ;
+
+        padding-right: 1rem
+            /* 16px */
+        ;
+        padding-left: 1rem
+            /* 16px */
+        ;
+    }
+
+    .list-form {
+        padding-top: 2.5rem
+            /* 40px */
+        ;
+        padding-left: 1rem;
+        padding-right: 1rem
+            /* 16px */
+        ;
+    }
+
+    .space-x-containera {
+        display: flex;
+        gap: 110px;
+        padding-bottom: 15px;
+
+    }
+
+    .space-x-containerb {
+        display: flex;
+        gap: 72px;
+        padding-bottom: 15px;
+
+    }
+
+    .space-x-containerc {
+        width: 500px;
+        /* background-color: red; */
+        display: flex;
+        gap: 65px;
+        padding-bottom: 15px;
+
+    }
+
+}
+
+@media (min-width: 300px) {
+    .footer {
+        height: 700px;
+    }
+
+    .query-form {
+        padding-bottom: 10px
+            /* 8px */
+        ;
+        padding-top: 10px
+            /* 28px */
+        ;
+
+        padding-right: 1rem
+            /* 16px */
+        ;
+        padding-left: 1rem
+            /* 16px */
+        ;
+    }
+
+    .list-form {
+        padding-top: 0.5rem;
+        padding-left: 1rem;
+        padding-right: 1rem
+            /* 16px */
+        ;
+    }
+
+    .flix-400 {
+        flex-direction: column;
+        align-items: start;
+    }
+
+    .heightc3 {
+        height: 450px;
+    }
+
+    .padding-copy {
+        padding-top: 1px;
+    }
+
+    .space-x-containera {
+        display: flex;
+        width: 500px;
+        /* background-color: red; */
+        gap: 110px;
+        padding-bottom: 15px;
+        padding-left: 10px;
+
+    }
+
+    .space-x-containerb {
+        display: flex;
+        width: 500px;
+        /* background-color: red; */
+        gap: 72px;
+        padding-bottom: 15px;
+        padding-left: 10px;
+
+    }
+
+    .space-x-containerc {
+        width: 500px;
+        /* background-color: red; */
+        display: flex;
+        gap: 65px;
+        padding-bottom: 15px;
+        padding-left: 10px;
+    }
+
+    .fonttt-size {
+        font-size: 15px;
+    }
+
+    .paddding {
+        padding-left: 4px;
+        padding-right: 8px;
+    }
+
+    .hieght-width {
+        height: 4rem;
+        width: 1.5rem;
+        padding: 2px;
+    }
+
+    .spaceee {
+        display: flex;
+        gap: 3px;
+    }
+
+    .paad-col3 {
+        padding-left: 4px;
+        padding-right: 8px;
+    }
+
+}
+
+
+
+
+/* md:space-x-24 sm:space-x-6 */

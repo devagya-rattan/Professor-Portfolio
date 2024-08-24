@@ -1,0 +1,19 @@
+.timesnowroman {
+    font-family: 'Times New Roman', Times, serif;
+  }
+  .roberto {
+    font-family: 'Roboto', sans-serif;
+  }
+  .lineend {
+    height: 1px;
+  }
+  
+  /* Additional CSS for smooth transitions */
+  /* /* /* .navbar-container {
+    position: relative;
+  }
+   */
+  /* .absolute {
+    position: absolute;
+  } */ 
+   
