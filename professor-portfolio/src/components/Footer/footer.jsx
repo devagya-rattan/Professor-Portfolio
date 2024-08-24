@@ -1,103 +1,124 @@
-import React from 'react';
+import React from "react";
 import { FaLinkedinIn } from "react-icons/fa6";
 import { BiLogoGmail } from "react-icons/bi";
 import { RiFacebookFill } from "react-icons/ri";
 import { FaTwitter } from "react-icons/fa";
 import { Link } from 'react-router-dom';
 
-import "./Footer.css";
-function Footer() {
+const Footer = () => {
   return (
-    <>
-      <div className='footer   bg-black w-full  '>
-        <div className='w-full sm:w-full  sm:pl-1 sm:pr-1 md:pl-5 md:pr-5 lg:pl-40  pt-2 lg:pr-40  flex flex-col'>
-
-          {/* column 1 */}
-          <div className='pb-6 pt-7 md:pl-4 paddding md:pr-4 sm:pl-4 sm:pr-4  flex flex-row  h-32 justify-between items-center text-white'>
-            <div className='texting  flex-col fonttt-size'><h3>Arun Kumar Verma <br />Assosiate Professor <br />Department of Electrical Engineering </h3></div>
-            <div className='flex flex-row spaceee space-x-7  '>
-              <a href=""><FaLinkedinIn className=' hieght-width text-white hover:opacity-40' /></a>
-              <a href=""><BiLogoGmail className=' hieght-width hover:opacity-40' /></a>
-              <a href=""><RiFacebookFill className='h-24 w-6 hieght-width text-white hover:opacity-40' /></a>
-              <a href=""><FaTwitter className='h-24 w-6 hieght-width text-white hover:opacity-40' /></a>
-            </div>
-          </div>
-
-          {/* column 2   */}
-          <div className='linegrey w-full flex-col bg-gray-500'></div>
-
-          {/* column 3 */}
-          <div className="flex  flix-400 text-white w-full heightc3 justify-between items-center md:items-start sm:items-start">
-            <div className=" heightc3  w-full list-form  flex flex-col justify-start">
-              <div className='space-x-containera   '>
-                <Link className='roberto fonttt-size font-normal hover:opacity-40 cursor-pointer texting' to='/'>Home</Link>
-                <Link className='roberto fonttt-size    font-normal hover:opacity-40 cursor-pointer texting' to='/blog'>Blog</Link>
-                <Link className='roberto fonttt-size  font-normal hover:opacity-40 cursor-pointer texting' to='/blog'>Phd</Link>
-               
-              </div>
-              <div className='space-x-containerb   lg:pt-7 md:pt-5  '>
-              <Link className='roberto fonttt-size  font-normal hover:opacity-40 cursor-pointer texting' to='/blog'>Publications</Link>
-                <Link className='roberto fonttt-size  font-normal hover:opacity-40 cursor-pointer texting' to='/blog'>Contact</Link>
-                <Link className='roberto fonttt-size  font-normal hover:opacity-40 cursor-pointer texting' to='/about'>About</Link>
-              
-
-              </div>
-              <div className='space-x-containerc    lg:pt-7 md:pt-5 '>
-              <Link className='roberto fonttt-size padding-c31 font-normal hover:opacity-40 cursor-pointer texting ' to='/blog'>Google Scholor</Link>
-              <Link className='roberto fonttt-size padding-c32  font-normal hover:opacity-40 cursor-pointer texting' to='/about'>About</Link>
-             
-                <Link className='roberto fonttt-size padding-c33 font-normal hover:opacity-40 cursor-pointer texting' to='/blog'>Events</Link>
-                
-                
-
-              </div>
-              <div className='line'></div>
-
-            </div>
-          
-            {/* when full screen */}
-            <div className="lg:h-full lg:border-l lg:border-gray-400"></div>
-
-            {/* when responsive */}
-            <div className='block  linegrey w-full flex-col bg-gray-500'></div>
-
-            <div className=" heightc3 w-3/6   query-form flex flex-col justify-start   ">
-              <div><p className='texting font-normal fonttt-size pb-4'>If You have any Queries feel free to Ask Here</p></div>
-              <div className='flex flex-col pb-2 '><input type='text' placeholder='First Name' className='texting w-full fonttt-size bg-black text-gray-500' />
-                <div className='lineone bg-gray-500'></div>
-              </div>
-
-              <div className='flex flex-col pb-2'><input type='text' placeholder='Last Name' className='w-full texting fonttt-size bg-black text-gray-500' />
-                <div className='lineone bg-gray-500'></div>
-              </div>
-
-              <div className='flex flex-col pb-3'><input type="email" placeholder='Email' className='w-full texting fonttt-size bg-black text-gray-500' />
-                <div className='lineone bg-gray-500'></div>
-              </div>
-              <div className='flex flex-col pb-3'><textarea   placeholder='Enter Your Queries here' className='w-full fonttt-size texting h-8 bg-black text-gray-500' />
-                <div className='lineone bg-gray-500'></div>
-              </div>
-              <div>
-              <button className='pt-2 pb-2 pl-4 pr-5 fonttt-size border-white border-2 hover:opacity-40 texting text-white'>Submit</button>
-              </div>
-            </div>
-
-
-          </div>
-
-
-          {/* column 4 */}
-          <div className='tagg linegrey w-full flex-col bg-gray-500'></div>
-
-          {/* column 5   */}
-          <div className='pt-6 h-10  text-center'>
-            <p className='text-white texting text-md  '> &copy; Trikor Technologia. All rights reserved. | Designed and developed by Trikor Technologia. </p>
-          </div>
+    <footer className="bg-black text-white py-8 px-4 lg:px-24">
+      <div className="lg:flex lg:justify-between">
+        {/* Contact Info */}
+        <div className="mb-8 lg:mb-0">
+          <h3 className="text-lg">Arun Kumar Verma</h3>
+          <p className="text-sm">Associate Professor</p>
+          <p className="text-sm">Department of Electrical Engineering</p>
         </div>
 
+        {/* Social Media Icons */}
+        <div className="flex justify-center space-x-4 mb-8 lg:mb-0">
+          <a href="">
+            <FaLinkedinIn className="hieght-width text-white hover:opacity-40" />
+          </a>
+          <a href="">
+            <BiLogoGmail className="hieght-width hover:opacity-40" />
+          </a>
+          <a href="">
+            <RiFacebookFill className="hieght-width text-white hover:opacity-40" />
+          </a>
+          <a href="">
+            <FaTwitter className="hieght-width text-white hover:opacity-40" />
+          </a>
+        </div>
       </div>
-    </>
+
+      <hr className="border-gray-500 my-8" />
+
+      {/* Navigation Links */}
+      <div className="lg:flex lg:flex-col lg:items-start lg:space-y-4">
+        <div className="flex justify-center space-x-8 mb-4 lg:mb-0">
+          <a href="/home" className="text-sm">
+            Home
+          </a>
+          <a href="/blog" className="text-sm">
+            Blog
+          </a>
+          <a href="/phd" className="text-sm">
+            Phd
+          </a>
+        </div>
+        <div className="flex justify-center space-x-8 mb-4 lg:mb-0">
+          <a href="/publications" className="text-sm">
+            Publications
+          </a>
+          <a href="/contact" className="text-sm">
+            Contact
+          </a>
+          <a href="/about" className="text-sm">
+            About
+          </a>
+        </div>
+        <div className="flex justify-center space-x-8">
+          <a href="/google-scholar" className="text-sm">
+            Google Scholar
+          </a>
+          <a href="/about" className="text-sm">
+            About
+          </a>
+          <a href="/events" className="text-sm">
+            Events
+          </a>
+        </div>
+      </div>
+
+      <hr className="border-gray-500 my-8" />
+
+      {/* Query Form */}
+      <div className="lg:flex lg:justify-between">
+        <div className="mb-4">
+          <p className="text-center text-sm mb-4">
+            If You have any Queries feel free to Ask Here
+          </p>
+          <form className="space-y-4">
+            <input
+              type="text"
+              placeholder="First Name"
+              className="w-full p-2 bg-black border border-white text-white"
+            />
+            <input
+              type="text"
+              placeholder="Last Name"
+              className="w-full p-2 bg-black border border-white text-white"
+            />
+            <input
+              type="email"
+              placeholder="Email"
+              className="w-full p-2 bg-black border border-white text-white"
+            />
+            <textarea
+              placeholder="Enter Your Queries here"
+              className="w-full p-2 bg-black border border-white text-white"
+            ></textarea>
+            <button
+              type="submit"
+              className="w-full p-2 border border-white hover:bg-white hover:text-black"
+            >
+              Submit
+            </button>
+          </form>
+        </div>
+      </div>
+
+      <hr className="border-gray-500 my-8" />
+
+      {/* Footer Credits */}
+      <div className="text-center text-xs">
+        © Trikor Technologia. All rights reserved. | Designed and developed by
+        Trikor Technologia.
+      </div>
+    </footer>
   );
-}
+};
 
 export default Footer;
