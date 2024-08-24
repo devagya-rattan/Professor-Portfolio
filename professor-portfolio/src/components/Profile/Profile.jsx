@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import publicationpng from "../../Images/addpublication.png";
 import blogpng from "../../Images/addblog.png";
 import internpng from "../../Images/addintern.png"
+import './Profile.css';
 
 function Profile() {
   const [activeForm, setActiveForm] = useState(null);
@@ -19,9 +20,9 @@ function Profile() {
           alt="Profile"
           className="w-150 h-150 rounded-full object-cover mt-8 mb-4"
         />
-        <h2 className="text-xl font-semibold text-gray-800">John Doe</h2>
-        <p className="text-gray-600 mb-8">john.doe@example.com</p>
-        <button className="bg-black text-white px-4 py-2 rounded hover:bg-white hover:text-black hover:ring-2 hover:ring-black transition">
+        <h2 className="text-xl font-semibold text-gray-800 texting">John Doe</h2>
+        <p className="text-gray-600 mb-8 texting">john.doe@example.com</p>
+        <button className="texting bg-black text-white px-4 py-2 rounded hover:bg-white hover:text-black hover:ring-2 hover:ring-black transition">
           Change Password
         </button>
       </div>
@@ -30,7 +31,7 @@ function Profile() {
       <div className="w-full sm:w-2/3 bg-white shadow-lg p-6 mt-6 sm:mt-0 sm:ml-6">
         {activeForm === null && (
           <div>
-            <h3 className="flex items-center justify-center text-2xl font-bold text-gray-800 mb-4">
+            <h3 className="flex texting items-center justify-center text-2xl font-bold text-gray-800 mb-4">
               Menu
             </h3>
             <ul className="flex flex-col items-center justify-center space-y-10">
@@ -61,11 +62,11 @@ function Profile() {
         {activeForm === "publications" && (
           <div>
             <div className="flex justify-between items-center">
-              <h3 className="text-2xl font-bold text-gray-800 mb-4">
+              <h3 className="text-2xl texting font-bold text-gray-800 mb-4">
                 Add Publications
               </h3>
               <button
-                className="font-xl text-gray-500 hover:text-gray-700 hover:scale-105 transition"
+                className="text-3xl text-gray-600  hover:text-gray-700 hover:scale-105 transition"
                 onClick={handleFormClose}
               >
                 &#10005;
@@ -73,14 +74,14 @@ function Profile() {
             </div>
             <form>
               <div className="mb-4">
-                <label className="block text-gray-700">Photo</label>
+                <label className="block pb-4 text-gray-700">Photo</label>
                 <input
                   type="file"
-                  className="block w-full text-sm text-slate-500 file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-semibold file:bg-black file:text-white hover:file:bg-white hover:file:text-black hover:file:ring-2 hover:file:ring-black"
+                  className="block w-full text-sm text-slate-500 file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-semibold file:bg-black file:text-white hover:file:opacity-40 "
                 />
               </div>
               <div className="mb-4">
-                <label className="block text-gray-700">Title</label>
+                <label className="block texting text-gray-700">Title</label>
                 <input
                   type="text"
                   className="mt-2 p-2 border border-gray-300 rounded w-full"
@@ -88,14 +89,14 @@ function Profile() {
                 />
               </div>
               <div className="mb-4">
-                <label className="block text-gray-700">Short Description</label>
+                <label className="block texting text-gray-700">Short Description</label>
                 <textarea
                   className="mt-2 p-2 border border-gray-300 rounded w-full"
                   placeholder="Enter a short description"
                 />
               </div>
               <div className="mb-4">
-                <label className="block text-gray-700">Long Description</label>
+                <label className="block texting text-gray-700">Long Description</label>
                 <textarea
                   className="mt-2 p-2 border border-gray-300 rounded w-full"
                   placeholder="Enter a long description"
@@ -104,7 +105,7 @@ function Profile() {
               </div>
               <button
                 type="submit"
-                className="bg-black text-white px-4 py-2 rounded hover:bg-white hover:text-black hover:ring-2 hover:ring-black transition"
+                className="bg-black texting text-white px-4 py-2 rounded hover:bg-white hover:text-black hover:ring-2 hover:ring-black transition"
               >
                 Submit
               </button>
@@ -116,7 +117,7 @@ function Profile() {
         {activeForm === "blog" && (
           <div>
             <div className="flex justify-between items-center">
-              <h3 className="text-2xl font-bold text-gray-800 mb-4">
+              <h3 className="text-2xl texting font-bold text-gray-800 mb-4">
                 Add Blog
               </h3>
               <button
@@ -135,24 +136,24 @@ function Profile() {
                 />
               </div>
               <div className="mb-4">
-                <label className="block text-gray-700">Title</label>
+                <label className="block texting text-gray-700">Title</label>
                 <input
                   type="text"
-                  className="mt-2 p-2 border border-gray-300 rounded w-full"
+                  className="mt-2 p-2 border texting border-gray-300 rounded w-full"
                   placeholder="Enter the title"
                 />
               </div>
               <div className="mb-4">
-                <label className="block text-gray-700">Long Description</label>
+                <label className="block texting text-gray-700">Long Description</label>
                 <textarea
-                  className="mt-2 p-2 border border-gray-300 rounded w-full"
+                  className="mt-2 p-2 border texting border-gray-300 rounded w-full"
                   placeholder="Enter a long description"
                   rows="5"
                 />
               </div>
               <button
                 type="submit"
-                className="bg-black text-white px-4 py-2 rounded hover:bg-white hover:text-black hover:ring-2 hover:ring-black transition"
+                className="bg-black texting text-white px-4 py-2 rounded hover:bg-white hover:text-black hover:ring-2 hover:ring-black transition"
               >
                 Submit
               </button>
