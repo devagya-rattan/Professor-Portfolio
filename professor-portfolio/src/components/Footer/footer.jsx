@@ -46,8 +46,8 @@ const Footer = () => {
           <Link to="/blog" className=" lg:pt-10  pt-3 pb-3 pr-24 lg:pr-0 lg:pb-8 lg:pl-24  text-base">
             Blog
           </Link>
-          <Link to="/phd" className=" lg:pt-10  pt-3 pb-3 lg:pb-8 lg:pr-0 lg:pl-24 text-base">
-            PhD
+          <Link to="/intern" className=" lg:pt-10  pt-3 pb-3 lg:pb-8 lg:pr-0 lg:pl-24 text-base">
+            PhD/Interns
           </Link>
         </div>
         <div className="flex  lg:justify-normal    mb-2 lg:mb-0">
@@ -65,8 +65,8 @@ const Footer = () => {
           <Link to="https://scholar.google.com/citations?user=JSz7nTIAAAAJ&hl=th" className="lg:pb-8 pr-14 lg:pr-0 pt-3 pb-3 lg:pl-10 texting text-base">
             Google Scholar
           </Link>
-          <Link to="/about" className="lg:pb-8 lg:pl-12 pr-20 lg:pr-0 lg:mr-0 mr-2 pt-3 pb-3  texting text-base">
-            About
+          <Link to="https://iitjammu.ac.in/faculty/~arunkumarverma" className="lg:pb-8 lg:pl-12 pr-20 lg:pr-0 lg:mr-0 mr-2 pt-3 pb-3  texting text-base">
+            IIT Jammu
           </Link>
           <Link to="/events" className="lg:pb-8 lg:pl-20  pt-3 pb-3 lg:ml-3 texting text-base">
             Events
