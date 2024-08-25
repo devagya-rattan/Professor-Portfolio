@@ -1,14 +1,16 @@
 import React, { useState } from "react";
 import axios from "axios";
-
-
+import { useSelector, useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
-
+import { userActions } from "../../Redux/Action";
 function Registration() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const navigate = useNavigate();
+  const userData = useSelector((state) => state);
+  const dispatch = useDispatch();
+  console.log(userData);
   const postForm = (e) => {
     e.preventDefault();
     axios
@@ -22,6 +24,7 @@ function Registration() {
           alert("User already registered please login");
           navigate("/login");
         } else {
+          dispatch(userActions(name));
           alert("Successful registration!");
         }
         console.log(response);
@@ -29,7 +32,6 @@ function Registration() {
       .catch((error) => {
         console.log(error);
       });
-
   };
   return (
     <div className="min-h-screen flex items-center justify-center bg-gray-100">
@@ -95,7 +97,6 @@ function Registration() {
           </button>
         </form>
       </div>
-
     </div>
   );
 }
