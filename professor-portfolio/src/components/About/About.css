@@ -1,0 +1,48 @@
+/* .about-one{
+    height: 400px;
+    background-image: url("../../Images/Aunvermaiithomepage.png"); /* Update with the correct path */
+    /* background-size: 400px 500px;  */
+     /* Or 'auto' if you prefer */
+     /* background-position: bottom center; /* Align image to the bottom center */
+    /* background-repeat: no-repeat; /* Prevent image from repeating */
+   
+    
+   /* background-blend-mode: multiply; */ 
+/* }  */
+  
+.height{
+    height: 400vh;
+}
+.texting{
+    font-family: 'Source Serif Pro', serif;
+}
+
+
+
+@media (min-width: 1024px) {
+    
+}
+
+
+@media (min-width: 768px) {
+  
+
+}
+
+
+
+
+@media (min-width: 640px) {
+   
+
+}
+
+@media (min-width: 300px) {
+    /* .text-xs{
+        font-size: 8px;
+    } */
+
+}
+
+
+

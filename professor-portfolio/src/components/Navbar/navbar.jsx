@@ -29,13 +29,14 @@ function Navbar() {
     };
   }, [isOpen]);
 
+
   return (
     <>
       <div className="navbar-container w-full px-6 pt-2 md:px-40 flex flex-col relative">
         <div className="flex flex-row h-14 justify-between items-center">
           <div className="flex-col">
-            <h5 className="timesnowroman lg:text-5xl md:text-4xl text-3xl font-extrabold">
-              Arun Verma kumar
+            <h5 className="timesnowroman lg:text-5xl md:text-4xl text-2xl font-extrabold">
+              Arun Kumar Verma 
             </h5>
           </div>
           <div className="hidden xl:flex space-x-3">
@@ -60,12 +61,18 @@ function Navbar() {
         >
           <div className="flex flex-col items-start p-6 gap-4">
             {/* Mobile Links */}
-            <Link className="roberto text-base font-bold hover:opacity-40" to="/" onClick={toggle}>Home</Link>
+           <Link className="roberto text-base font-bold hover:opacity-40" to="/" onClick={toggle}>Home</Link>
+            <div className="my-2 h-px bg-black w-full" />
             <Link className="roberto text-base font-bold hover:opacity-40" to="/blog" onClick={toggle}>Blog</Link>
+            <div className="my-2 h-px bg-black w-full" />
             <Link className="roberto text-base font-bold hover:opacity-40" to="/blog" onClick={toggle}>Phd/Interns</Link>
+            <div className="my-2 h-px bg-black w-full" />
             <Link className="roberto text-base font-bold hover:opacity-40" to="/publications" onClick={toggle}>Publishments</Link>
+            <div className="my-2 h-px bg-black w-full" />
             <Link className="roberto text-base font-bold hover:opacity-40" to="/blog" onClick={toggle}>Contact us</Link>
+            <div className="my-2 h-px bg-black w-full" />
             <Link className="roberto text-base font-bold hover:opacity-40" to="/about" onClick={toggle}>About Me</Link>
+            <div className="my-2 h-px bg-black w-full" />
           </div>
         </div>
 
