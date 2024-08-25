@@ -8,7 +8,7 @@ export const userReducer = (state = initialState, action) => {
     case USERS_ARRAY:
       return {
         ...state,
-        usersData: [...state.usersData,action.payload],
+        usersData: [action.payload],
       };
     default:
       return state;
