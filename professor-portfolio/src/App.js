@@ -9,6 +9,7 @@ import Profile from './components/Profile/Profile';
 import Login from './components/Login/Login';
 import Registration from './components/Registration/Registration'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Timeline from './components/Timeline/timeline';
 function App() {
   return (
     <>
@@ -23,6 +24,8 @@ function App() {
                     <Route  path="/profile" element={<Profile/>}/>
                     <Route  path="/registration" element={<Registration/>}/>
                     <Route  path="/publications" element={<Publications/>}/>
+                    {/* for temporary use */}
+                    <Route  path="/Timeline" element={<Timeline/>}/>  
                 </Routes>
                 <Footer />
             </Router>
