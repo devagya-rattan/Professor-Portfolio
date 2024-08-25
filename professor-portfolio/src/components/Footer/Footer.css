@@ -1,4 +1,10 @@
 /* font-family: "Roboto Condensed", sans-serif; */
+.texting {
+    font-family: "Roboto Condensed", sans-serif;
+}
+
+
+
 .footer {
     height: 800px;
 }
@@ -48,9 +54,6 @@
     height: 2px;
 }
 
-.texting {
-    font-family: "Roboto Condensed", sans-serif;
-}
 
 .lineone {
     height: 1px;

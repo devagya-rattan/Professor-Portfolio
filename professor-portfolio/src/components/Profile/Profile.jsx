@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import publicationpng from "../../Images/addpublication.png";
 import blogpng from "../../Images/addblog.png";
 import internpng from "../../Images/addintern.png"
+import Profilepng from "../../Images/Aunvermaiithomepage.png"
 import './Profile.css';
 
 function Profile() {
@@ -12,46 +13,46 @@ function Profile() {
   };
 
   return (
-    <div className="min-h-screen bg-gray-50 flex flex-col sm:flex-row">
+    <div className="min-h-screen bg-white flex flex-col sm:flex-row my-1">
       {/* Left side: Profile Information */}
       <div className="w-full sm:w-1/3 bg-white shadow-lg p-6 flex flex-col items-center">
         <img
-          src="https://via.placeholder.com/150"
+          src={Profilepng}
           alt="Profile"
           className="w-150 h-150 rounded-full object-cover mt-8 mb-4"
         />
-        <h2 className="text-xl font-semibold text-gray-800 texting">John Doe</h2>
-        <p className="text-gray-600 mb-8 texting">john.doe@example.com</p>
+        <h2 className="text-4xl font-semibold text-black texting">Arun Kumar Verma</h2>
+        <p className="text-black mb-8 texting">arun.verma@iitjammu.ac.in<br/>arunverma59@gmail.com</p>
         <button className="texting bg-black text-white px-4 py-2 rounded hover:bg-white hover:text-black hover:ring-2 hover:ring-black transition">
           Change Password
         </button>
       </div>
 
       {/* Right side: Menu Options and Forms */}
-      <div className="w-full sm:w-2/3 bg-white shadow-lg p-6 mt-6 sm:mt-0 sm:ml-6">
+      <div className="w-full sm:w-2/3 bg-black shadow-lg p-10 mt-6 sm:mt-0 ">
         {activeForm === null && (
           <div>
-            <h3 className="flex texting items-center justify-center text-2xl font-bold text-gray-800 mb-4">
+            <h3 className="flex texting items-center justify-center text-4xl font-bold text-white mb-4">
               Menu
             </h3>
             <ul className="flex flex-col items-center justify-center space-y-10">
               <img
                 src={publicationpng}
                 alt="Publications"
-                className="h-36 w-2/3 bg-white shadow-lg rounded-lg cursor-pointer transition-transform transform hover:scale-105 hover:shadow-2xl"
+                className="h-36 sm:w-2/4 lg:2/3 bg-white shadow-lg shadow-white rounded-lg cursor-pointer transition-transform transform hover:scale-105 hover:shadow-lg hover:shadow-white"
                 onClick={() => setActiveForm("publications")}
               />
 
               <img
                 src={blogpng}
                 alt="Blog"
-                className="h-36 w-2/3 bg-white shadow-lg rounded-lg cursor-pointer transition-transform transform hover:scale-105 hover:shadow-2xl"
+               className="h-36 sm:w-2/4 lg:2/3 bg-white shadow-lg shadow-white rounded-lg cursor-pointer transition-transform transform hover:scale-105 hover:shadow-lg hover:shadow-white"
                 onClick={() => setActiveForm("blog")}
               />
               <img
                 src={internpng}
                 alt="Intern"
-                className="h-36 w-2/3 bg-white shadow-lg rounded-lg cursor-pointer transition-transform transform hover:scale-105 hover:shadow-2xl"
+                 className="h-36 sm:w-2/4 lg:2/3 bg-white shadow-lg shadow-white rounded-lg cursor-pointer transition-transform transform hover:scale-105 hover:shadow-lg hover:shadow-white"
                 onClick={() => setActiveForm("intern")}
               />
             </ul>
@@ -62,11 +63,11 @@ function Profile() {
         {activeForm === "publications" && (
           <div>
             <div className="flex justify-between items-center">
-              <h3 className="text-2xl texting font-bold text-gray-800 mb-4">
+              <h3 className="text-2xl texting font-bold text-white mb-4">
                 Add Publications
               </h3>
               <button
-                className="text-3xl text-gray-600  hover:text-gray-700 hover:scale-105 transition"
+                className="text-3xl text-white  hover:text-white hover:scale-105 transition"
                 onClick={handleFormClose}
               >
                 &#10005;
@@ -74,14 +75,14 @@ function Profile() {
             </div>
             <form>
               <div className="mb-4">
-                <label className="block pb-4 text-gray-700">Photo</label>
+                <label className="block pb-4 text-white">Photo</label>
                 <input
                   type="file"
-                  className="block w-full text-sm text-slate-500 file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-semibold file:bg-black file:text-white hover:file:opacity-40 "
+                  className="block w-full text-sm text-white file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-semibold file:bg-white file:text-black hover:file:opacity-40 "
                 />
               </div>
               <div className="mb-4">
-                <label className="block texting text-gray-700">Title</label>
+                <label className="block texting text-white">Title</label>
                 <input
                   type="text"
                   className="mt-2 p-2 border border-gray-300 rounded w-full"
@@ -89,14 +90,14 @@ function Profile() {
                 />
               </div>
               <div className="mb-4">
-                <label className="block texting text-gray-700">Short Description</label>
+                <label className="block texting text-white">Short Description</label>
                 <textarea
                   className="mt-2 p-2 border border-gray-300 rounded w-full"
                   placeholder="Enter a short description"
                 />
               </div>
               <div className="mb-4">
-                <label className="block texting text-gray-700">Long Description</label>
+                <label className="block texting text-white">Long Description</label>
                 <textarea
                   className="mt-2 p-2 border border-gray-300 rounded w-full"
                   placeholder="Enter a long description"
@@ -105,7 +106,7 @@ function Profile() {
               </div>
               <button
                 type="submit"
-                className="bg-black texting text-white px-4 py-2 rounded hover:bg-white hover:text-black hover:ring-2 hover:ring-black transition"
+                className="bg-white texting text-black px-4 py-2 rounded hover:opacity-40 transition"
               >
                 Submit
               </button>
@@ -117,11 +118,11 @@ function Profile() {
         {activeForm === "blog" && (
           <div>
             <div className="flex justify-between items-center">
-              <h3 className="text-2xl texting font-bold text-gray-800 mb-4">
+              <h3 className="text-2xl texting font-bold text-white mb-4">
                 Add Blog
               </h3>
               <button
-                className="text-gray-500 hover:text-gray-700 transition"
+                className="text-gray-500 hover:text-white transition"
                 onClick={handleFormClose}
               >
                 &#10005;
@@ -129,14 +130,14 @@ function Profile() {
             </div>
             <form>
               <div className="mb-4">
-                <label className="block text-gray-700">Photo</label>
+                <label className="block text-white">Photo</label>
                 <input
                   type="file"
-                   className="block w-full text-sm text-slate-500 file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-semibold file:bg-black file:text-white hover:file:bg-white hover:file:text-black hover:file:ring-2 hover:file:ring-black"
+                   className="block w-full text-sm text-white file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-semibold file:bg-white file:text-black hover:file:opacity-40 "
                 />
               </div>
               <div className="mb-4">
-                <label className="block texting text-gray-700">Title</label>
+                <label className="block texting text-white">Title</label>
                 <input
                   type="text"
                   className="mt-2 p-2 border texting border-gray-300 rounded w-full"
@@ -144,7 +145,7 @@ function Profile() {
                 />
               </div>
               <div className="mb-4">
-                <label className="block texting text-gray-700">Long Description</label>
+                <label className="block texting text-white">Long Description</label>
                 <textarea
                   className="mt-2 p-2 border texting border-gray-300 rounded w-full"
                   placeholder="Enter a long description"
@@ -153,7 +154,7 @@ function Profile() {
               </div>
               <button
                 type="submit"
-                className="bg-black texting text-white px-4 py-2 rounded hover:bg-white hover:text-black hover:ring-2 hover:ring-black transition"
+                 className="bg-white texting text-black px-4 py-2 rounded hover:opacity-40 transition"
               >
                 Submit
               </button>
@@ -165,11 +166,11 @@ function Profile() {
         {activeForm === "intern" && (
           <div>
             <div className="flex justify-between items-center">
-              <h3 className="text-2xl font-bold text-gray-800 mb-4">
+              <h3 className="text-2xl font-bold text-white mb-4">
                 Add Intern
               </h3>
               <button
-                className="text-gray-500 hover:text-gray-700 transition"
+                className="text-gray-500 hover:text-white transition"
                 onClick={handleFormClose}
               >
                 &#10005;
@@ -177,14 +178,14 @@ function Profile() {
             </div>
             <form>
               <div className="mb-4">
-                <label className="block text-gray-700">Photo</label>
+                <label className="block text-white">Photo</label>
                 <input
                   type="file"
-                   className="block w-full text-sm text-slate-500 file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-semibold file:bg-black file:text-white hover:file:bg-white hover:file:text-black hover:file:ring-2 hover:file:ring-black"
+                   className="block w-full text-sm text-white file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-semibold file:bg-white file:text-black hover:file:opacity-40 "
                 />
               </div>
               <div className="mb-4">
-                <label className="block text-gray-700">Name</label>
+                <label className="block text-white">Name</label>
                 <input
                   type="text"
                   className="mt-2 p-2 border border-gray-300 rounded w-full"
@@ -192,7 +193,7 @@ function Profile() {
                 />
               </div>
               <div className="mb-4">
-                <label className="block text-gray-700">Description</label>
+                <label className="block text-white">Description</label>
                 <textarea
                   className="mt-2 p-2 border border-gray-300 rounded w-full"
                   placeholder="Describe the intern"
@@ -201,7 +202,7 @@ function Profile() {
               </div>
               <button
                 type="submit"
-                className="bg-black text-white px-4 py-2 rounded hover:bg-white hover:text-black hover:ring-2 hover:ring-black transition"
+                 className="bg-white texting text-black px-4 py-2 rounded hover:opacity-40 transition"
               >
                 Submit
               </button>
