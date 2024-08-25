@@ -30,7 +30,7 @@ export const register = async (req, res) => {
     jsonwebtoken.sign(
       payload,
       process.env.JWT_SECRET,
-      { expiresIn: "1h" },
+      { expiresIn: "10h" },
       async (err, token) => {
         if (err) {
           console.error(err.message);
