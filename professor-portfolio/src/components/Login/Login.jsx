@@ -1,27 +1,26 @@
 import React, { useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
-import { useSelector, useDispatch } from "react-redux";
-import { userActions } from "../../Redux/Action";
 function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const navigate = useNavigate();
-  const userData = useSelector((state) => state);
-  const dispatch = useDispatch();
-  console.log(userData);
   const loginForm = (e) => {
     e.preventDefault();
-    axios
-      .post(`http://localhost:8080/api/users/login`, { email, password })
-      .then((response) => {
-        alert("login successful!");
-        navigate("/profile")
-        dispatch(userActions(email));
-      })
-      .catch((error) => {
-        console.log(error);
-      });
+    try {
+      axios
+        .post(`http://localhost:8080/api/users/login`, { email, password })
+        .then((response) => {
+          alert("login successful!");
+          navigate("/profile")
+        })
+        .catch((error) => {
+          console.log(error);
+        });
+      
+    } catch (error) {
+      console.log(error);
+    }
   };
   return (
     <div className="min-h-screen flex items-center justify-center bg-gray-100">
