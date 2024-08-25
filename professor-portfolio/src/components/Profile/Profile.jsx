@@ -1,16 +1,33 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import { PuffLoader } from "react-spinners";
 import publicationpng from "../../Images/addpublication.png";
 import blogpng from "../../Images/addblog.png";
-import internpng from "../../Images/addintern.png"
-import './Profile.css';
-
+import internpng from "../../Images/addintern.png";
+import "./Profile.css";
+import { useSelector } from "react-redux";
 function Profile() {
   const [activeForm, setActiveForm] = useState(null);
-
+  const userData = useSelector((state) => state);
+  console.log(userData);
   const handleFormClose = () => {
     setActiveForm(null);
   };
+  const [loading, setLoading] = useState(true);
 
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setLoading(false);
+    }, 3000);
+
+    return () => clearTimeout(timer);
+  }, []);
+
+  if (loading)
+    return (
+      <div className=" flex flex-col justify-center items-center h-screen w-full">
+        <PuffLoader color="#000000" size={100} />
+      </div>
+    );
   return (
     <div className="min-h-screen bg-gray-50 flex flex-col sm:flex-row">
       {/* Left side: Profile Information */}
@@ -20,7 +37,9 @@ function Profile() {
           alt="Profile"
           className="w-150 h-150 rounded-full object-cover mt-8 mb-4"
         />
-        <h2 className="text-xl font-semibold text-gray-800 texting">John Doe</h2>
+        <h2 className="text-xl font-semibold text-gray-800 texting">
+          John Doe
+        </h2>
         <p className="text-gray-600 mb-8 texting">john.doe@example.com</p>
         <button className="texting bg-black text-white px-4 py-2 rounded hover:bg-white hover:text-black hover:ring-2 hover:ring-black transition">
           Change Password
@@ -89,14 +108,18 @@ function Profile() {
                 />
               </div>
               <div className="mb-4">
-                <label className="block texting text-gray-700">Short Description</label>
+                <label className="block texting text-gray-700">
+                  Short Description
+                </label>
                 <textarea
                   className="mt-2 p-2 border border-gray-300 rounded w-full"
                   placeholder="Enter a short description"
                 />
               </div>
               <div className="mb-4">
-                <label className="block texting text-gray-700">Long Description</label>
+                <label className="block texting text-gray-700">
+                  Long Description
+                </label>
                 <textarea
                   className="mt-2 p-2 border border-gray-300 rounded w-full"
                   placeholder="Enter a long description"
@@ -132,7 +155,7 @@ function Profile() {
                 <label className="block text-gray-700">Photo</label>
                 <input
                   type="file"
-                   className="block w-full text-sm text-slate-500 file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-semibold file:bg-black file:text-white hover:file:bg-white hover:file:text-black hover:file:ring-2 hover:file:ring-black"
+                  className="block w-full text-sm text-slate-500 file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-semibold file:bg-black file:text-white hover:file:bg-white hover:file:text-black hover:file:ring-2 hover:file:ring-black"
                 />
               </div>
               <div className="mb-4">
@@ -144,7 +167,9 @@ function Profile() {
                 />
               </div>
               <div className="mb-4">
-                <label className="block texting text-gray-700">Long Description</label>
+                <label className="block texting text-gray-700">
+                  Long Description
+                </label>
                 <textarea
                   className="mt-2 p-2 border texting border-gray-300 rounded w-full"
                   placeholder="Enter a long description"
@@ -180,7 +205,7 @@ function Profile() {
                 <label className="block text-gray-700">Photo</label>
                 <input
                   type="file"
-                   className="block w-full text-sm text-slate-500 file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-semibold file:bg-black file:text-white hover:file:bg-white hover:file:text-black hover:file:ring-2 hover:file:ring-black"
+                  className="block w-full text-sm text-slate-500 file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-semibold file:bg-black file:text-white hover:file:bg-white hover:file:text-black hover:file:ring-2 hover:file:ring-black"
                 />
               </div>
               <div className="mb-4">

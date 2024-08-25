@@ -2,7 +2,7 @@ import imageone from "../../Images/Aunvermaiithomepagestage.jpeg";
 import arunsir from "../../Images/arunsir.jpeg";
 import "./About.css";
 import React, { useState, useEffect } from "react";
-import { BeatLoader } from "react-spinners";
+import { PuffLoader } from "react-spinners";
 
 function About() {
   const [loading, setLoading] = useState(true);
@@ -18,7 +18,7 @@ function About() {
   if (loading)
     return (
       <div className=" flex flex-col justify-center items-center h-screen w-full">
-        <BeatLoader />
+        <PuffLoader color="#000000" size={100} />
       </div>
     );
 
