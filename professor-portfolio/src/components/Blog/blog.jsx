@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { BeatLoader } from "react-spinners";
+import { PuffLoader } from "react-spinners";
 
 function Blog() {
   const [loading, setLoading] = useState(true);
@@ -15,15 +15,15 @@ function Blog() {
   if (loading)
     return (
       <div className=" flex flex-col justify-center items-center h-screen w-full">
-        <BeatLoader />
+        <PuffLoader color="#000000" size={100} />
       </div>
     );
 
   return (
     <>
-      <div className='h-screen w-full pl-40 pr-40'>
-        <br/>
-        Blog.
+      <div className="h-screen w-full pl-40 pr-40">
+        <br />
+        Blogs
       </div>
     </>
   );
