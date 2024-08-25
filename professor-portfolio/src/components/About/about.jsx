@@ -4,6 +4,11 @@ import 'aos/dist/aos.css'; // Import AOS styles
 import imageone from "../../Images/Aunvermaiithomepagestage.jpeg";
 import arunsir from "../../Images/arunsir.jpeg";
 import "./About.css";
+<<<<<<< HEAD
+import React, { useState, useEffect } from "react";
+import { PuffLoader } from "react-spinners";
+=======
+>>>>>>> main
 
 function About() {
   // Initialize AOS with adjusted duration for slower animation
@@ -16,6 +21,16 @@ function About() {
     });
   }, []);
 
+<<<<<<< HEAD
+  if (loading)
+    return (
+      <div className=" flex flex-col justify-center items-center h-screen w-full">
+        <PuffLoader color="#000000" size={100} />
+      </div>
+    );
+
+=======
+>>>>>>> main
   return (
     <>
       <div className='pt-px height w-full'>
