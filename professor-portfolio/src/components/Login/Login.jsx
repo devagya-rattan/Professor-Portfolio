@@ -1,10 +1,15 @@
 import React, { useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
+import { useSelector, useDispatch } from "react-redux";
+import { userActions } from "../../Redux/Action";
 function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const navigate = useNavigate();
+  const userData = useSelector((state) => state);
+  const dispatch = useDispatch();
+  console.log(userData);
   const loginForm = (e) => {
     e.preventDefault();
     axios
@@ -12,6 +17,7 @@ function Login() {
       .then((response) => {
         alert("login successful!");
         navigate("/profile")
+        dispatch(userActions(email));
       })
       .catch((error) => {
         console.log(error);

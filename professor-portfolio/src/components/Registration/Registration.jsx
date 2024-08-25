@@ -22,10 +22,10 @@ function Registration() {
       .then((response) => {
         if (response.data.message === "The user already exists") {
           alert("User already registered please login");
-          navigate("/login");
         } else {
           dispatch(userActions(name));
           alert("Successful registration!");
+          navigate("/login");
         }
         console.log(response);
       })
