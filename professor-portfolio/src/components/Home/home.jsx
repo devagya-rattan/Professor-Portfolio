@@ -22,7 +22,7 @@ function Home() {
   return (
     <div className="h-screen w-full pl-40 pr-40">
       <br />
-      hieeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
+      hieeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeedsfghjkhgfdsa
     </div>
   );
 }
