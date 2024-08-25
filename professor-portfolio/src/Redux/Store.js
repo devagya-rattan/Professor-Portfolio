@@ -49,7 +49,7 @@ import { legacy_createStore as createStore} from 'redux'
 import { userReducer } from './Reducer';
 
 // Constants
-const EXPIRY_TIME_MS = 30 * 24 * 60 * 60 * 1000; // 30 days in milliseconds
+const EXPIRY_TIME_MS =1000; // 30 days in milliseconds
 
 // Function to load state from localStorage
 const loadState = () => {
