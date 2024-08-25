@@ -23,7 +23,7 @@ function Blog() {
     <>
       <div className='h-screen w-full pl-40 pr-40'>
         <br/>
-        Blogs
+        Blog.
       </div>
     </>
   );
