@@ -118,7 +118,7 @@ export default About;
 //           }`}
 //         >
 //           {/* Content Container */}
-//           <div className={`w-5/12 ${index % 2 === 0 ? "pl-20" : "pr-20"}`}>
+//           <div className={w-5/12 ${index % 2 === 0 ? "pl-20" : "pr-20"}}>
 //             <div className="bg-white p-4 rounded shadow-md">
 //               <h3 className="mb-1 font-bold text-lg">{event.year}</h3>
 //               <p className="text-sm text-gray-700">{event.content}</p>

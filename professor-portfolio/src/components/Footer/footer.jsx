@@ -75,7 +75,11 @@ const Footer = () => {
         
       </div>
       
+<<<<<<< HEAD
       <hr className="border-gray-500 my-4" />
+=======
+      <hr className="border-gray-500 mb-4" />
+>>>>>>> e3328b535f70803e17267f2fb171e7300c87df50
 
       {/* Query Form */}
       <div className="lg:flex lg:w-2/4 pl-4 lg:pl-0  lg:justify-between ">
