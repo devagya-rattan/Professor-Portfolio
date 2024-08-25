@@ -1,11 +1,29 @@
-import React from "react";
-
+import React, { useState, useEffect } from "react";
+import { BeatLoader } from "react-spinners";
 function Publications() {
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setLoading(false);
+    }, 3000);
+
+    return () => clearTimeout(timer);
+  }, []);
+
+  if (loading)
+    return (
+      <div className=" flex flex-col justify-center items-center h-screen w-full">
+        <BeatLoader />
+      </div>
+    );
   return (
     <>
-    <div></div>
+      <div></div>
       <div className="min-h-screen flex flex-col items-center justify-center p-4 sm:p-6">
-        <div className="bg-black text-white font-bold p-4 mb-4">Recent activities</div>
+        <div className="bg-black text-white font-bold p-4 mb-4">
+          Recent activities
+        </div>
         <div className="max-w-4xl w-full bg-white shadow-lg rounded-lg overflow-hidden">
           <div className="p-6 sm:p-8">
             <div className="divide-y divide-black m-2 ml-4 mr-4">

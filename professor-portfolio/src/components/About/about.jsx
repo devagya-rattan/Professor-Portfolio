@@ -77,8 +77,6 @@ export default About;
 // <div className="h-[5px] w-1 border-l-2 border-dotted border-black ml-[2px]"></div>
 // </div> */}
 
-
-
 // import React from "react";
 
 // const About = () => {

@@ -18,10 +18,10 @@ app.use("/api/users", userRouter);
 mongoose
   .connect(process.env.MONGO_URL)
   .then(() => {
-    console.log("connected to mongo db".bgGreen.black);
+    console.log(" connected to mongo db ".bgGreen.black);
   })
   .catch((error) => {
-    console.log("error connecting to mongo db".bgRed.white);
+    console.log(" error connecting to mongo db ".bgRed.white,error);
   });
 // Starting the server on port
 app.listen(PORT, () => {
