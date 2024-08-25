@@ -130,7 +130,7 @@ const Footer = () => {
       </div>
       </div>
 
-      <hr className="border-gray-500 my-4" />
+      <hr className="border-gray-500 mb-4" />
 
       {/* Footer Credits */}
       <div className="text-center md:text-base text-sm texting ">
