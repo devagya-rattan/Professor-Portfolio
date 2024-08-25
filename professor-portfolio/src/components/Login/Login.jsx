@@ -72,12 +72,12 @@ function Login() {
                 Remember Me
               </label>
             </div>
-            <a
+            {/* <a
               href="#"
               className="text-sm text-black hover:underline focus:outline-none focus:ring-2 focus:ring-blue-600"
             >
               Forgot Password?
-            </a>
+            </a> */}
           </div>
 
           <button
