@@ -20,16 +20,16 @@ const Footer = () => {
 
         {/* Social Media Icons */}
         <div className="flex items-center pl-4 lg:pl-0 space-x-12 lg:space-x-10 mt-7 md:mt-7  mb-4 lg:mb-0">
-          <a href="">
+          <a href="https://www.linkedin.com/in/dr-arun-kumar-verma-b1b12924/">
             <FaLinkedinIn className="h-5 w-5 md:h-7 md:w-6 text-white hover:opacity-40" />
           </a>
-          <a href="">
+          <a href="mailto:arun.verma@iitjammu.ac.in">
             <BiLogoGmail className="h-5 w-5 md:h-7 md:w-6 hover:opacity-40" />
           </a>
-          <a href="">
+          <a href="https://www.facebook.com/arun.k.verma.12/">
             <RiFacebookFill className="h-5 w-5 md:h-7 md:w-6 text-white hover:opacity-40" />
           </a>
-          <a href="">
+          <a href="https://x.com/arunvermaiitd?lang=en">
             <FaTwitter className="h-5 w-5 md:h-7 md:w-6 text-white hover:opacity-40" />
           </a>
         </div>
@@ -62,7 +62,7 @@ const Footer = () => {
           </Link>
         </div>
         <div className="flex lg:justify-normal    mb-2 lg:mb-0">
-          <Link to="/google-scholar" className="lg:pb-8 pr-14 lg:pr-0 pt-3 pb-3 lg:pl-10 texting text-base">
+          <Link to="https://scholar.google.com/citations?user=JSz7nTIAAAAJ&hl=th" className="lg:pb-8 pr-14 lg:pr-0 pt-3 pb-3 lg:pl-10 texting text-base">
             Google Scholar
           </Link>
           <Link to="/about" className="lg:pb-8 lg:pl-12 pr-20 lg:pr-0 lg:mr-0 mr-2 pt-3 pb-3  texting text-base">
