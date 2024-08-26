@@ -8,14 +8,14 @@ import Blog from "./components/Blog/blog";
 import Profile from "./components/Profile/Profile";
 import Login from "./components/Login/Login";
 import Registration from "./components/Registration/Registration";
-import NotFound from "./components/Notfound/Notfound"; // Import your NotFound component
+import NotFound from "./components/Notfound/Notfound"; 
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { useSelector } from "react-redux";
 
 function App() {
   const userData = useSelector((state) => state);
   const isUserRegistered = userData.usersData.length > 0;
-
+  console.log(userData.usersData.length);
   return (
     <>
       <Router>
