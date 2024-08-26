@@ -1,6 +1,6 @@
 // src/store.js
 import { legacy_createStore as createStore } from "redux";
-import { userReducer } from "./Reducer"; // Assuming you have a rootReducer defined
+import { userReducer } from "./Reducer"; 
 
 // Function to load state from localStorage
 const loadState = () => {  
