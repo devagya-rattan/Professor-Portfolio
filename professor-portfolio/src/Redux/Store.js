@@ -49,7 +49,8 @@ import { legacy_createStore as createStore} from 'redux'
 import { userReducer } from './Reducer';
 
 // Constants
-const EXPIRY_TIME_MS =  1000; // 30 days in milliseconds
+// const EXPIRY_TIME_MS =1000; // 30 days in milliseconds
+// const EXPIRY_TIME_MS =  1000; // 30 days in milliseconds
 
 // Function to load state from localStorage
 const loadState = () => {
@@ -64,7 +65,7 @@ const loadState = () => {
     const currentTime = Date.now();
     const timeElapsed = currentTime - parseInt(savedTime, 10);
 
-    if (timeElapsed > EXPIRY_TIME_MS) {
+    if (timeElapsed ) {
       localStorage.removeItem('state');
       localStorage.removeItem('savedTime');
       return undefined; // State expired

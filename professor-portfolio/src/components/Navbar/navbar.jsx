@@ -43,9 +43,9 @@ function Navbar() {
             {/* Desktop Links */}
             <Link className="roberto text-base font-bold hover:opacity-40 cursor-pointer" to="/">Home</Link>
             <Link className="roberto text-base pl-2 font-bold hover:opacity-40 cursor-pointer" to="/blog">Blog</Link>
-            <Link className="roberto text-base pl-2 font-bold hover:opacity-40 cursor-pointer" to="/blog">Phd/Interns</Link>
+            <Link className="roberto text-base pl-2 font-bold hover:opacity-40 cursor-pointer" to="/intern">Phd/Interns</Link>
             <Link className="roberto text-base pl-2 font-bold hover:opacity-40 cursor-pointer" to="/publications">Publishments</Link>
-            <Link className="roberto text-base pl-2 font-bold hover:opacity-40 cursor-pointer" to="/blog">Contact us</Link>
+            <Link className="roberto text-base pl-2 font-bold hover:opacity-40 cursor-pointer" to="/contact">Contact us</Link>
             <Link className="roberto text-base pl-2 font-bold hover:opacity-40 cursor-pointer" to="/about">About Me</Link>
           </div>
 
@@ -65,11 +65,11 @@ function Navbar() {
             <div className="my-2 h-px bg-black w-full" />
             <Link className="roberto text-base font-bold hover:opacity-40" to="/blog" onClick={toggle}>Blog</Link>
             <div className="my-2 h-px bg-black w-full" />
-            <Link className="roberto text-base font-bold hover:opacity-40" to="/blog" onClick={toggle}>Phd/Interns</Link>
+            <Link className="roberto text-base font-bold hover:opacity-40" to="/intern" onClick={toggle}>Phd/Interns</Link>
             <div className="my-2 h-px bg-black w-full" />
             <Link className="roberto text-base font-bold hover:opacity-40" to="/publications" onClick={toggle}>Publishments</Link>
             <div className="my-2 h-px bg-black w-full" />
-            <Link className="roberto text-base font-bold hover:opacity-40" to="/blog" onClick={toggle}>Contact us</Link>
+            <Link className="roberto text-base font-bold hover:opacity-40" to="/contact" onClick={toggle}>Contact us</Link>
             <div className="my-2 h-px bg-black w-full" />
             <Link className="roberto text-base font-bold hover:opacity-40" to="/about" onClick={toggle}>About Me</Link>
             <div className="my-2 h-px bg-black w-full" />

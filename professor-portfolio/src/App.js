@@ -5,6 +5,8 @@ import Footer from "./components/Footer/footer";
 import About from "./components/About/about";
 import Publications from "./components/Publications/Publications";
 import Blog from "./components/Blog/blog";
+import Intern from "./components/Intern/Intern";
+import Contact from "./components/Contact/Contact";
 import Profile from "./components/Profile/Profile";
 import Login from "./components/Login/Login";
 import Registration from "./components/Registration/Registration";
@@ -22,6 +24,8 @@ function App() {
           <Route exact path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/blog" element={<Blog />} />
+          <Route path="/Intern" element={<Intern />} />
+          <Route path="/contact" element={<Contact />} />
           <Route
             path={userData.usersData.length === 0 ? "/registration" : "/login"}
             element={
