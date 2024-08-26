@@ -8,12 +8,14 @@ import Blog from "./components/Blog/blog";
 import Profile from "./components/Profile/Profile";
 import Login from "./components/Login/Login";
 import Registration from "./components/Registration/Registration";
+import NotFound from "./components/Notfound/Notfound"; // Import your NotFound component
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { useSelector } from "react-redux";
 
 function App() {
   const userData = useSelector((state) => state);
-  console.log(userData.usersData.length);
+  const isUserRegistered = userData.usersData.length > 0;
+
   return (
     <>
       <Router>
@@ -22,15 +24,20 @@ function App() {
           <Route exact path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/blog" element={<Blog />} />
-          <Route
-            path={userData.usersData.length === 0 ? "/registration" : "/login"}
-            element={
-              userData.usersData.length > 0 ? <Login /> : <Registration />
-            }
-          />
           <Route path="/profile" element={<Profile />} />
-          {/* <Route path="/registration" element={<Registration />} /> */}
           <Route path="/publications" element={<Publications />} />
+
+          {/* Conditional Rendering for Registration and Login Routes */}
+          {!isUserRegistered && (
+            <Route path="/registration" element={<Registration />} />
+          )}
+          {isUserRegistered ? (
+            <Route path="/login" element={<Login />} />
+          ) : (
+            <Route path="*" element={<NotFound />} /> // If user is not registered, show NotFound for any route
+          )}
+
+          <Route path="*" element={<NotFound />} />
         </Routes>
         <Footer />
       </Router>
