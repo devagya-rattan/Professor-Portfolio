@@ -1,0 +1,112 @@
+.hscreen{
+    height: 100vh;
+
+}
+.hscreenn{
+    height: 360vh;
+
+}
+
+.texting {
+    font-family: "Roboto Condensed", sans-serif;
+}
+
+.hieethhh{
+    height: 75%;
+}
+@media (min-width: 1020px) and (min-height: 790px)  {
+    .hscreenn {
+        height: 310vh !important;
+    }
+    .hieethhh{
+        height: 80% !important;
+    }
+    
+}
+@media (min-width: 1020px) and (min-height: 590px) {
+    .hscreenn {
+        height: 410vh ;
+    }
+    .hieethhh{
+        height: 90% ;
+    }
+    .hscreen{
+        height: 120vh;
+    
+    }
+}
+
+
+@media (min-height: 839px) {
+    .hscreenn{
+        height: 240vh !important;
+    
+    }
+    .hieethhh{
+        height: 83% !important;
+    }
+    .hscreen{
+        height: 80vh;
+    
+    }
+    
+}
+
+
+@media (min-height: 900px) {
+    .hscreenn{
+        height: 235vh !important;
+    
+    }
+
+}
+
+@media (min-height: 730px) {
+    .hscreenn{
+        height: 225vh ;
+    
+    }
+
+}
+
+
+@media (min-height: 1350px) {
+    .hscreenn{
+        height: 185vh !important;
+    
+    }
+
+}
+
+@media (min-height: 1100px) {
+    .hscreenn{
+        height: 185vh !important;
+    
+    }
+    .hscreen{
+        height: 90vh;
+    
+    }
+
+}
+@media (min-height: 1180px) {
+   
+    .hscreen{
+        height: 70vh;
+    
+    }
+
+}
+
+@media (min-height: 639px) {
+    /* .text-xs{
+        font-size: 8px;
+    } */
+    .hscreenn{
+        height: 330vh;
+    
+    }
+    .hieethhh{
+        height: 83%;
+    }
+}

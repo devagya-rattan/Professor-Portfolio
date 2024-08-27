@@ -19,13 +19,15 @@ import {
 } from "react-router-dom";
 import { useSelector } from "react-redux";
 
+
+import Timeline from "./components/Timeline/timeline";
+
 function App() {
   const userData = useSelector((state) => state.userState);
   const loginData = useSelector((state) => state.loginState);
   const isUserRegistered = userData.usersData.length > 0;
-
-  // Assume user is logged in if user data exists (e.g., first user in the array is non-null)
   const isUserLoggedIn = loginData.loginData.length > 0;
+
   console.log(userData.usersData.length);
   console.log(loginData.loginData.length);
   return (
@@ -56,7 +58,14 @@ function App() {
             element={isUserLoggedIn ? <Profile /> : <Navigate to="/login" />}
           />
 
+          <Route path="/profile" element={<Profile />} />
+          {/* <Route path="/registration" element={<Registration />} /> */}
+          <Route path="/publications" element={<Publications />} />
+          <Route path="/timeline" element={<Timeline/>} />
+
+
           <Route path="*" element={<NotFound />} />
+
         </Routes>
         <Footer />
       </Router>
