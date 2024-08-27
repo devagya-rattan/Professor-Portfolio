@@ -26,7 +26,8 @@ function App() {
 
   // Assume user is logged in if user data exists (e.g., first user in the array is non-null)
   const isUserLoggedIn = loginData.loginData.length > 0;
-
+  console.log(userData.usersData.length);
+  console.log(loginData.loginData.length);
   return (
     <>
       <Router>
