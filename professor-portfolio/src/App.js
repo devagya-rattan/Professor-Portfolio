@@ -23,10 +23,7 @@ function App() {
   const userData = useSelector((state) => state.userState);
   const loginData = useSelector((state) => state.loginState);
   const isUserRegistered = userData.usersData.length > 0;
-
-  // Assume user is logged in if user data exists (e.g., first user in the array is non-null)
   const isUserLoggedIn = loginData.loginData.length > 0;
-
   return (
     <>
       <Router>
