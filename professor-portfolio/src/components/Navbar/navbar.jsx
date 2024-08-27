@@ -32,8 +32,8 @@ function Navbar() {
 
   return (
     <>
-      <div className="navbar-container w-full px-6 pt-2 md:px-40 flex flex-col relative bg-red-700">
-        <div className="flex flex-row h-14 justify-between items-center  text-orange-300">
+      <div className="navbar-container w-full px-6 pt-2 md:px-40 flex flex-col relative">
+        <div className="flex flex-row h-14 justify-between items-center">
           <div className="flex-col">
             <h5 className="timesnowroman lg:text-5xl md:text-4xl text-2xl font-extrabold">
               Arun Kumar Verma 
@@ -62,29 +62,29 @@ function Navbar() {
           <div className="flex flex-col items-start p-6 gap-4">
             {/* Mobile Links */}
            <Link className="roberto text-base font-bold hover:opacity-40" to="/" onClick={toggle}>Home</Link>
-            <div className="my-2 h-px bg-orange-300 w-full" />
+            <div className="my-2 h-px bg-black w-full" />
             <Link className="roberto text-base font-bold hover:opacity-40" to="/blog" onClick={toggle}>Blog</Link>
-            <div className="my-2 h-px bg-orange-300 w-full" />
+            <div className="my-2 h-px bg-black w-full" />
             <Link className="roberto text-base font-bold hover:opacity-40" to="/blog" onClick={toggle}>Phd/Interns</Link>
-            <div className="my-2 h-px bg-orange-300 w-full" />
+            <div className="my-2 h-px bg-black w-full" />
             <Link className="roberto text-base font-bold hover:opacity-40" to="/publications" onClick={toggle}>Publishments</Link>
-            <div className="my-2 h-px bg-orange-300 w-full" />
+            <div className="my-2 h-px bg-black w-full" />
             <Link className="roberto text-base font-bold hover:opacity-40" to="/blog" onClick={toggle}>Contact us</Link>
-            <div className="my-2 h-px bg-orange-300 w-full" />
+            <div className="my-2 h-px bg-black w-full" />
             <Link className="roberto text-base font-bold hover:opacity-40" to="/about" onClick={toggle}>About Me</Link>
-            <div className="my-2 h-px bg-orange-300 w-full" />
+            <div className="my-2 h-px bg-black w-full" />
           </div>
         </div>
 
         {/* Overlay when menu is open */}
         {isOpen && (
           <div
-            className="fixed inset-0 bg-orange-300 opacity-50 z-40"
+            className="fixed inset-0 bg-black opacity-50 z-40"
             onClick={toggle}
           ></div>
         )}
 
-        <div className="flex-col lineend w-full bg-orange-300"></div>
+        <div className="flex-col lineend w-full bg-black"></div>
       </div>
     </>
   );

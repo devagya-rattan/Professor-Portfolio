@@ -1,6 +1,9 @@
-import { USERS_ARRAY } from "./Type";
+import { USERS_ARRAY,LOGIN_ARRAY } from "./Type";
 const initialState = {
   usersData: [],
+};
+const loginState = {
+  loginData: [],
 };
 
 export const userReducer = (state = initialState, action) => {
@@ -9,6 +12,17 @@ export const userReducer = (state = initialState, action) => {
       return {
         ...state,
         usersData: [action.payload],
+      };
+    default:
+      return state;
+  }
+};
+export const loginReducer = (state = loginState, action) => {
+  switch (action.type) {
+    case LOGIN_ARRAY:
+      return {
+        ...state,
+        loginData: [action.payload],
       };
     default:
       return state;

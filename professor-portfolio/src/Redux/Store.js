@@ -1,15 +1,33 @@
-// src/store.js
 import { legacy_createStore as createStore } from "redux";
-import { userReducer } from "./Reducer"; 
+import { userReducer, loginReducer } from "./Reducer";
+
+// Constants
+const LOGIN_EXPIRY_TIME_MS = 10000; // 10 seconds in milliseconds
 
 // Function to load state from localStorage
-const loadState = () => {  
+const loadState = () => {
   try {
     const serializedState = localStorage.getItem("state");
+    const loginSavedTime = localStorage.getItem("loginSavedTime");
+
     if (serializedState === null) {
       return undefined; // Return undefined to let reducers initialize state
     }
-    return JSON.parse(serializedState);
+
+    const currentTime = Date.now();
+    const loginTimeElapsed = currentTime - parseInt(loginSavedTime, 10);
+
+    const loadedState = JSON.parse(serializedState);
+
+    // Check if login state has expired
+    if (loginTimeElapsed > LOGIN_EXPIRY_TIME_MS) {
+      return {
+        ...loadedState,
+        loginState: undefined, // Clear login state if expired
+      };
+    }
+
+    return loadedState;
   } catch (err) {
     console.error("Could not load state", err);
     return undefined;
@@ -19,28 +37,41 @@ const loadState = () => {
 // Function to save state to localStorage
 const saveState = (state) => {
   try {
-    const serializedState = JSON.stringify(state);
+    const stateToPersist = {
+      userState: state.userState, // Persist userState normally
+      loginState: state.loginState, // Persist loginState but with expiry
+    };
+    const serializedState = JSON.stringify(stateToPersist);
+    const currentTime = Date.now();
+
     localStorage.setItem("state", serializedState);
+    localStorage.setItem("loginSavedTime", currentTime.toString()); // Save login state time
   } catch (err) {
     console.error("Could not save state", err);
   }
 };
 
-// Load the persisted state from localStorage
+// Initial state
 const persistedState = loadState();
 
+// Root reducer combining both reducers manually
+const rootReducer = (state = {}, action) => ({
+  userState: userReducer(state.userState, action),
+  loginState: loginReducer(state.loginState, action),
+});
+
 // Create the Redux store with the persisted state
-const store = createStore(userReducer, persistedState);
+const store = createStore(
+  rootReducer,
+  persistedState // Load persisted state including login state with expiry
+);
 
 // Subscribe to the store to save the state to localStorage whenever it changes
 store.subscribe(() => {
-  saveState(store.getState());
+  saveState(store.getState()); // Save both userState and loginState
 });
 
 export default store;
-
-
-
 
 
 // -----------------------------------------?????????????????>>>>>>>>>>>>>>>>>>>>
@@ -58,7 +89,7 @@ export default store;
 //     const savedTime = localStorage.getItem('savedTime');
 
 //     if (serializedState === null || savedTime === null) {
-      // return undefined; // No saved state or timestamp
+// return undefined; // No saved state or timestamp
 //     }
 
 //     const currentTime = Date.now();
