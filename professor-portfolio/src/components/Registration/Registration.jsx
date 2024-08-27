@@ -8,7 +8,7 @@ function Registration() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const navigate = useNavigate();
-  const userData = useSelector((state) => state);
+  const userData = useSelector((state) => state.userState);
   const dispatch = useDispatch();
   console.log(userData);
   const postForm = (e) => {
