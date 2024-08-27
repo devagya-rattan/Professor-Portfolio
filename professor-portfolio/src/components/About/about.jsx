@@ -4,6 +4,8 @@ import 'aos/dist/aos.css'; // Import AOS styles
 import imageone from "../../Images/Aunvermaiithomepagestage.jpeg";
 import arunsir from "../../Images/arunsir.jpeg";
 import "./About.css";
+import Timeline from '../Timeline/timeline';
+import Timelineexp from '../Timeline/timelineexp';
 
 function About() {
   // Initialize AOS with adjusted duration for slower animation
@@ -37,7 +39,7 @@ function About() {
         </div>
 
         {/* Section 2: Detailed description about Arun Verma with specific animation */}
-        <div className='flex flex-col lg:flex-row w-full justify-center h-auto bg-black items-center px-5 lg:px-40 py-10'>
+        <div className='flex flex-col lg:flex-row w-full justify-center h-auto bg-black items-center px-5 lg:px-40 py-10 mb-1'>
           <div className='w-full lg:w-2/4 mb-5 lg:mb-0' data-aos="fade-left">
             <p className='texting text-base text-white'>
               Dr. Arun Kumar Verma is a distinguished academic and researcher with profound expertise in power electronics and renewable energy systems. He earned his master’s and Ph.D. degrees from the Indian Institute of Technology (IIT) Delhi, New Delhi, India. Over the years, Dr. Verma has held several prestigious positions across the globe, including serving as a visiting professor at Ontario Tech University, Oshawa, Ontario, Canada, in 2024. He has also been a post-doctoral research fellow at the Energy Research Institute (ERI@N) at Nanyang Technological University (NTU) Singapore from 2015 to 2016, and a visiting graduate researcher at the Smart Grid Energy Research Center (SMERC) at the University of California Los Angeles (UCLA) from 2014 to 2015. Dr. Verma has been recognized with numerous awards for his contributions to solar energy and power systems, including the prestigious BASE fellowship for advanced solar energy research in 2014 and the POSOCO Power System Research Award in 2016. He is also a recipient of the SERB SIRE fellowship.
@@ -58,6 +60,8 @@ function About() {
             />
           </div>
         </div>
+        <Timeline />
+        <Timelineexp  />
       </div>
     </>
   );
@@ -69,13 +73,6 @@ export default About;
 
 
 
-// {/* <div className="flex items-center">
-// {/* Horizontal Dotted Line */}
-// <div className="w-[60px] h-1 border-b-2 border-dotted border-black"></div>
-
-// {/* Vertical Dotted Line */}
-// <div className="h-[5px] w-1 border-l-2 border-dotted border-black ml-[2px]"></div>
-// </div> */}
 
 // import React from "react";
 
