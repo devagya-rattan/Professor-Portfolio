@@ -11,18 +11,19 @@ export const userReducer = (state = initialState, action) => {
     case USERS_ARRAY:
       return {
         ...state,
-        usersData: [action.payload],
+        usersData: [...state.usersData, action.payload], // Add the new user to the existing array
       };
     default:
       return state;
   }
 };
+
 export const loginReducer = (state = loginState, action) => {
   switch (action.type) {
     case LOGIN_ARRAY:
       return {
         ...state,
-        loginData: [action.payload],
+        loginData: [...state.loginData, action.payload], // Add the new login data to the existing array
       };
     default:
       return state;
