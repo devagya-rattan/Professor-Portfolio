@@ -50,7 +50,7 @@ function Navbar() {
           </div>
 
           {/* Hamburger Icon */}
-          <GiHamburgerMenu className="lg:hidden block cursor-pointer" onClick={toggle} />
+          <GiHamburgerMenu className="xl:hidden block cursor-pointer" onClick={toggle} />
         </div>
 
         {/* Sidebar Mobile Menu */}

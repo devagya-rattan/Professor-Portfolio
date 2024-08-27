@@ -11,6 +11,9 @@ import Registration from "./components/Registration/Registration";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { useSelector } from "react-redux";
 
+
+import Timeline from "./components/Timeline/timeline";
+
 function App() {
   const userData = useSelector((state) => state);
   console.log(userData.usersData.length);
@@ -31,6 +34,7 @@ function App() {
           <Route path="/profile" element={<Profile />} />
           {/* <Route path="/registration" element={<Registration />} /> */}
           <Route path="/publications" element={<Publications />} />
+          <Route path="/timeline" element={<Timeline/>} />
         </Routes>
         <Footer />
       </Router>
