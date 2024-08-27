@@ -27,6 +27,9 @@ function App() {
   const loginData = useSelector((state) => state.loginState);
   const isUserRegistered = userData.usersData.length > 0;
   const isUserLoggedIn = loginData.loginData.length > 0;
+
+  console.log(userData.usersData.length);
+  console.log(loginData.loginData.length);
   return (
     <>
       <Router>
