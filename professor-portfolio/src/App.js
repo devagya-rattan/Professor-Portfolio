@@ -19,6 +19,9 @@ import {
 } from "react-router-dom";
 import { useSelector } from "react-redux";
 
+
+import Timeline from "./components/Timeline/timeline";
+
 function App() {
   const userData = useSelector((state) => state.userState);
   const loginData = useSelector((state) => state.loginState);
@@ -52,7 +55,14 @@ function App() {
             element={isUserLoggedIn ? <Profile /> : <Navigate to="/login" />}
           />
 
+          <Route path="/profile" element={<Profile />} />
+          {/* <Route path="/registration" element={<Registration />} /> */}
+          <Route path="/publications" element={<Publications />} />
+          <Route path="/timeline" element={<Timeline/>} />
+
+
           <Route path="*" element={<NotFound />} />
+
         </Routes>
         <Footer />
       </Router>
