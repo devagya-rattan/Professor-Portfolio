@@ -17,7 +17,7 @@ function Login() {
         .post(`http://localhost:8080/api/users/login`, { email, password })
         .then((response) => {
           alert("login successful!");
-          // navigate("/profile")
+          navigate("/profile")
           dispatch(loginActions(email));
         })
         .catch((error) => {

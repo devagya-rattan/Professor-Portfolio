@@ -1,14 +1,48 @@
 import React, { useState } from "react";
 import Profilepng from "../../Images/Aunvermaiithomepage.png";
-import './Profile.css';
-
+import "./Profile.css";
+import axios from "axios";
 function Profile() {
   const [activeForm, setActiveForm] = useState(null);
-
+  //// publication data ------------------->>>>>>>>>>>>>>
+  const [image, setimage] = useState("");
+  const [title, setTitle] = useState("");
+  const [publicationdate, setpublicationDate] = useState("");
+  const [category, setCategory] = useState("");
+  const [shortdescription, setShortdescription] = useState("");
+  const [longdescription, setLongdescription] = useState("");
   const handleFormClose = () => {
     setActiveForm(null);
   };
-
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    // console.log({
+    //   title,
+    //   publicationDate,
+    //   category,
+    //   shortdescription,
+    //   longdescription,
+    // });
+    try {
+      axios
+        .post(`http://localhost:8080/api/addpublish/publish`, {
+          image,
+          title,
+          category,
+          publicationdate,
+          shortdescription,
+          longdescription,
+        })
+        .then((response) => {
+          console.log(response);
+        })
+        .catch((error) => {
+          console.log(error);
+        });
+    } catch (error) {
+      console.log(error);
+    }
+  };
   return (
     <div className="min-h-screen bg-white flex flex-col sm:flex-row my-1">
       {/* Left side: Profile Information */}
@@ -18,8 +52,14 @@ function Profile() {
           alt="Profile"
           className="w-150 h-150 rounded-full object-cover mt-8 mb-4"
         />
-        <h2 className="text-4xl font-semibold text-black texting">Arun Kumar Verma</h2>
-        <p className="text-black mb-8 texting">arun.verma@iitjammu.ac.in<br />arunverma59@gmail.com</p>
+        <h2 className="text-4xl font-semibold text-black texting">
+          Arun Kumar Verma
+        </h2>
+        <p className="text-black mb-8 texting">
+          arun.verma@iitjammu.ac.in
+          <br />
+          arunverma59@gmail.com
+        </p>
         <button className="texting bg-black text-white px-4 py-2 rounded hover:bg-white hover:text-black hover:ring-2 hover:ring-black transition">
           Change Password
         </button>
@@ -37,7 +77,9 @@ function Profile() {
                 className="h-36 sm:w-2/4 lg:w-2/3 bg-white shadow-lg shadow-white rounded-lg cursor-pointer transition-transform transform hover:scale-105 hover:shadow-lg hover:shadow-white"
                 onClick={() => setActiveForm("publications")}
               >
-                <span className="text-2xl text-black font-bold">Add Publication</span>
+                <span className="text-2xl text-black font-bold">
+                  Add Publication
+                </span>
               </button>
 
               <button
@@ -51,7 +93,9 @@ function Profile() {
                 className="h-36 sm:w-2/4 lg:w-2/3 bg-white shadow-lg shadow-white rounded-lg cursor-pointer transition-transform transform hover:scale-105 hover:shadow-lg hover:shadow-white"
                 onClick={() => setActiveForm("intern")}
               >
-                <span className="text-2xl text-black font-bold">Add Intern</span>
+                <span className="text-2xl text-black font-bold">
+                  Add Intern
+                </span>
               </button>
             </ul>
           </div>
@@ -71,7 +115,7 @@ function Profile() {
                 &#10005;
               </button>
             </div>
-            <form>
+            <form onSubmit={handleSubmit}>
               <div className="mb-4">
                 <label className="block pb-4 text-white">Photo</label>
                 <input
@@ -82,6 +126,8 @@ function Profile() {
               <div className="mb-4">
                 <label className="block texting text-white">Title</label>
                 <input
+                  value={title}
+                  onChange={(e) => setTitle(e.target.value)}
                   type="text"
                   className="mt-2 p-2 border border-gray-300 rounded w-full"
                   placeholder="Enter the title"
@@ -92,6 +138,8 @@ function Profile() {
                 <div className="flex-grow">
                   <label className="block texting text-white">Category</label>
                   <select
+                    value={category}
+                    onChange={(e) => setCategory(e.target.value)}
                     className="mt-2 p-2 border border-gray-300 rounded w-full"
                   >
                     <option value="">Select a category</option>
@@ -102,29 +150,42 @@ function Profile() {
                   </select>
                 </div>
                 <div className="flex-grow">
-                  <label className="block texting text-white">Publication Date</label>
+                  <label className="block texting text-white">
+                    Publication Date
+                  </label>
                   <input
+                    value={publicationdate}
+                    onChange={(e) => setpublicationDate(e.target.value)}
                     type="date"
                     className="mt-2 p-2 border border-gray-300 rounded w-full"
                   />
                 </div>
               </div>
               <div className="mb-4">
-                <label className="block texting text-white">Short Description</label>
+                <label className="block texting text-white">
+                  Short Description
+                </label>
                 <textarea
+                  value={shortdescription}
+                  onChange={(e) => setShortdescription(e.target.value)}
                   className="mt-2 p-2 border border-gray-300 rounded w-full"
                   placeholder="Enter a short description"
                 />
               </div>
               <div className="mb-4">
-                <label className="block texting text-white">Long Description</label>
+                <label className="block texting text-white">
+                  Long Description
+                </label>
                 <textarea
+                  value={longdescription}
+                  onChange={(e) => setLongdescription(e.target.value)}
                   className="mt-2 p-2 border border-gray-300 rounded w-full"
                   placeholder="Enter a long description"
                   rows="5"
                 />
               </div>
               <button
+                onClick={handleSubmit}
                 type="submit"
                 className="bg-white texting text-black px-4 py-2 rounded hover:opacity-40 transition"
               >
@@ -165,7 +226,9 @@ function Profile() {
                 />
               </div>
               <div className="mb-4">
-                <label className="block texting text-white">Long Description</label>
+                <label className="block texting text-white">
+                  Long Description
+                </label>
                 <textarea
                   className="mt-2 p-2 border texting border-gray-300 rounded w-full"
                   placeholder="Enter a long description"
@@ -186,9 +249,7 @@ function Profile() {
         {activeForm === "intern" && (
           <div>
             <div className="flex justify-between items-center">
-              <h3 className="text-2xl font-bold text-white mb-4">
-                Add Intern
-              </h3>
+              <h3 className="text-2xl font-bold text-white mb-4">Add Intern</h3>
               <button
                 className="text-gray-500 hover:text-white transition"
                 onClick={handleFormClose}
