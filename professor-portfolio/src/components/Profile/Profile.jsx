@@ -11,18 +11,15 @@ function Profile() {
   const [category, setCategory] = useState("");
   const [shortdescription, setShortdescription] = useState("");
   const [longdescription, setLongdescription] = useState("");
+  const [blogtitle, setBlogTitle] = useState("");
+  const [blogdescription, setBlogDecsription] = useState("");
+  const [interntitle, setInternTitle] = useState("");
+  const [interndescription, setInterndescription] = useState("");
   const handleFormClose = () => {
     setActiveForm(null);
   };
   const handleSubmit = (e) => {
     e.preventDefault();
-    // console.log({
-    //   title,
-    //   publicationDate,
-    //   category,
-    //   shortdescription,
-    //   longdescription,
-    // });
     try {
       axios
         .post(`http://localhost:8080/api/addpublish/publish`, {
@@ -32,6 +29,42 @@ function Profile() {
           publicationdate,
           shortdescription,
           longdescription,
+        })
+        .then((response) => {
+          console.log(response);
+        })
+        .catch((error) => {
+          console.log(error);
+        });
+    } catch (error) {
+      console.log(error);
+    }
+  };
+  const blogSubmit = (e) => {
+    e.preventDefault();
+    try {
+      axios
+        .post(`http://localhost:8080/api/addblog/blog`, {
+          blogtitle,
+          blogdescription,
+        })
+        .then((response) => {
+          console.log(response);
+        })
+        .catch((error) => {
+          console.log(error);
+        });
+    } catch (error) {
+      console.log(error);
+    }
+  };
+  const internSubmit = (e) => {
+    e.preventDefault();
+    try {
+      axios
+        .post(`http://localhost:8080/api/addintern/intern`, {
+          interntitle,
+          interndescription,
         })
         .then((response) => {
           console.log(response);
@@ -209,7 +242,7 @@ function Profile() {
                 &#10005;
               </button>
             </div>
-            <form>
+            <form onSubmit={blogSubmit}>
               <div className="mb-4">
                 <label className="block text-white">Photo</label>
                 <input
@@ -220,6 +253,10 @@ function Profile() {
               <div className="mb-4">
                 <label className="block texting text-white">Title</label>
                 <input
+                  value={blogtitle}
+                  onChange={(e) => {
+                    setBlogTitle(e.target.value);
+                  }}
                   type="text"
                   className="mt-2 p-2 border texting border-gray-300 rounded w-full"
                   placeholder="Enter the title"
@@ -230,12 +267,17 @@ function Profile() {
                   Long Description
                 </label>
                 <textarea
+                  value={blogdescription}
+                  onChange={(e) => {
+                    setBlogDecsription(e.target.value);
+                  }}
                   className="mt-2 p-2 border texting border-gray-300 rounded w-full"
                   placeholder="Enter a long description"
                   rows="5"
                 />
               </div>
               <button
+                onClick={blogSubmit}
                 type="submit"
                 className="bg-white texting text-black px-4 py-2 rounded hover:opacity-40 transition"
               >
@@ -257,7 +299,7 @@ function Profile() {
                 &#10005;
               </button>
             </div>
-            <form>
+            <form onSubmit={internSubmit}>
               <div className="mb-4">
                 <label className="block text-white">Photo</label>
                 <input
@@ -268,6 +310,10 @@ function Profile() {
               <div className="mb-4">
                 <label className="block text-white">Name</label>
                 <input
+                  value={interntitle}
+                  onChange={(e) => {
+                    setInternTitle(e.target.value);
+                  }}
                   type="text"
                   className="mt-2 p-2 border border-gray-300 rounded w-full"
                   placeholder="Enter the intern's name"
@@ -276,12 +322,17 @@ function Profile() {
               <div className="mb-4">
                 <label className="block text-white">Description</label>
                 <textarea
+                  value={interndescription}
+                  onChange={(e) => {
+                    setInterndescription(e.target.value);
+                  }}
                   className="mt-2 p-2 border border-gray-300 rounded w-full"
                   placeholder="Enter a description"
                   rows="5"
                 />
               </div>
               <button
+                onClick={internSubmit}
                 type="submit"
                 className="bg-white text-black px-4 py-2 rounded hover:opacity-40 transition"
               >

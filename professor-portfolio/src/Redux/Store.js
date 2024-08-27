@@ -80,7 +80,7 @@ import { legacy_createStore as createStore } from "redux";
 import { userReducer, loginReducer } from "./Reducer";
 
 // Constants
-const LOGIN_EXPIRY_TIME_MS = 10000; // 10 seconds in milliseconds
+const LOGIN_EXPIRY_TIME_MS = 6 * 60 * 60 * 1000; // 10 seconds in milliseconds
 
 // Function to load state from localStorage
 const loadState = () => {
