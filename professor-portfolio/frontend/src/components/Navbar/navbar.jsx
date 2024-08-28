@@ -92,7 +92,7 @@ function Navbar() {
                   </Link>
                   <Link className="block px-4 font-semibold py-2 text-sm text-gray-700 hover:bg-gray-100" to="/phd" onClick={togglePeopleDropdown}>
                     Btech
-                  </Link>
+                  </Link>  
                 </div>
               )}
             </div>
@@ -128,7 +128,7 @@ function Navbar() {
           {/* Hamburger Icon */}
           <GiHamburgerMenu className="xl:hidden block cursor-pointer" onClick={toggle} />
         </div>
-
+        <div className="my-2 h-px bg-black w-full" />
         {/* Sidebar Mobile Menu */}
         <div
           className={`mobile-menu fixed top-0 left-0 h-full w-64 bg-white shadow-lg transform transition-transform duration-300 ease-in-out ${
