@@ -21,6 +21,8 @@ import { useSelector } from "react-redux";
 
 
 import Timeline from "./components/Timeline/timeline";
+import Foot from "./components/About/foot";
+import Head from "./components/About/head";
 
 function App() {
   const userData = useSelector((state) => state.userState);
@@ -62,6 +64,7 @@ function App() {
           {/* <Route path="/registration" element={<Registration />} /> */}
           <Route path="/publications" element={<Publications />} />
           <Route path="/timeline" element={<Timeline/>} />
+        
 
 
           <Route path="*" element={<NotFound />} />
