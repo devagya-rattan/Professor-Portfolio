@@ -1,62 +1,134 @@
-/* .about-one{
-    height: 400px;
-    background-image: url("../../Images/Aunvermaiithomepage.png"); /* Update with the correct path */
-    /* background-size: 400px 500px;  */
-     /* Or 'auto' if you prefer */
-     /* background-position: bottom center; /* Align image to the bottom center */
-    /* background-repeat: no-repeat; /* Prevent image from repeating */
-   
-    
-   /* background-blend-mode: multiply; */ 
-/* }  */
+
   
-.height{
-    height: 600vh ;
-}
 .texting{
     font-family: 'Source Serif Pro', serif;
 }
 
-/* 
-@media (min-width: 300px) and (min-height: 500px) {
-    .height{
-        height: 680vh;
+
+
+
+/* Default height */
+.height {
+    height: 655vh; /* Default height */
+  }
+  
+  /* Media queries for different screen sizes */
+  @media (min-width: 430px) and (min-height: 900px) {
+    .height {
+      height: 820vh; /* Adjusted height */
     }
-
-}
-
-@media (min-width: 414px) and (min-height: 800px) {
-    .height{
-        height: 500vh;
+  }
+  
+  @media (min-width: 1024px) and (min-height: 600px) {
+    .height {
+      height: 870vh; /* Adjusted height */
     }
-
-}
-
-@media (min-height: 800px) {
-    .height{
-        height: 510vh ;
+  }
+  
+  @media (min-height: 640px) {
+    .height {
+      height: 860vh; /* Adjusted height */
     }
-}
-
-
-@media (min-height: 1000px) {
-    .height{
-        height: 400vh ;
+  }
+  
+  @media (min-width: 375px) and (min-height: 667px) {
+    .height {
+      height: 830vh; /* Adjusted height */
     }
-
-}
-
-
-
-
-@media (min-width: 640px) {
-   
-
-}
-
-@media (min-width: 300px) {
-    /* .text-xs{
-        font-size: 8px;
-    } */
-
-/* }  */
+  }
+  
+  @media (min-width: 540px) and (min-height: 720px) {
+    .height {
+      height: 765vh; /* Adjusted height */
+    }
+  }
+  
+  @media (min-width: 360px) and (min-height: 740px) {
+    .height {
+      height: 803vh; /* Adjusted height */
+    }
+  }
+  
+  @media (min-width: 1200px) and (min-height: 800px) {
+    .height {
+      height: 670vh; /* Adjusted height */
+    }
+  }
+  
+  @media (min-width: 390px) and (min-height: 844px) {
+    .height {
+      height: 630vh; /* Adjusted height */
+    }
+  }
+  
+  @media (min-width: 344px) and (min-height: 882px) {
+    .height {
+      height: 640vh; /* Adjusted height */
+    }
+  }
+  
+  @media (min-width: 414px) and (min-height: 896px) {
+    .height {
+      height: 605vh; /* Adjusted height */
+    }
+  }
+  
+  @media (min-height: 900px) {
+    .height {
+      height: 588vh; /* Adjusted height */
+    }
+  }
+  
+  @media (min-height: 914px) {
+    .height {
+      height: 600vh; /* Adjusted height */
+    }
+  }
+  
+  @media (min-width: 412px) and (min-height: 915px) {
+    .height {
+      height: 600vh; /* Adjusted height */
+    }
+  }
+  
+  @media (min-width: 430px) and (min-height: 932px) {
+    .height {
+      height: 590vh; /* Adjusted height */
+    }
+  }
+  
+  @media (min-height: 1024px) {
+    .height {
+      height: 558vh; 
+    }
+  }
+  
+  @media (min-width: 820px) and (min-height: 1180px) {
+    .height {
+      height: 470vh; 
+    }
+  }
+  
+  @media (min-height: 1280px) {
+    .height {
+      height: 445vh;
+    }
+  }
+  
+  @media (min-height: 1360px) {
+    .height {
+      height: 408vh; 
+    }
+  }
+  
+  @media (min-height: 1368px) {
+    .height {
+      height: 435vh; 
+    }
+  }
+  @media (min-height: 1500px) {
+    .height {
+      height: 500vh; 
+    }
+  }
+  
