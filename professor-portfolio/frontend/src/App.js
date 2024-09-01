@@ -18,8 +18,6 @@ import {
   Navigate,
 } from "react-router-dom";
 import { useSelector } from "react-redux";
-
-
 import Timeline from "./components/Timeline/timeline";
 
 function App() {
@@ -27,7 +25,6 @@ function App() {
   const loginData = useSelector((state) => state.loginState);
   const isUserRegistered = userData.usersData.length > 0;
   const isUserLoggedIn = loginData.loginData.length > 0;
-
   console.log(userData.usersData.length);
   console.log(loginData.loginData.length);
   return (
@@ -35,22 +32,22 @@ function App() {
       <Router>
         <Navbar />
         <Routes>
+          {/* Public Routes */}
           <Route exact path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/blog" element={<Blog />} />
-          <Route path="/Intern" element={<Intern />} />
+          <Route path="/intern" element={<Intern />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/publications" element={<Publications />} />
+          <Route path="/timeline" element={<Timeline />} />
 
-          {/* Conditional Rendering for Registration and Login Routes */}
+          {/* Conditional Rendering for Registration Route */}
           {!isUserRegistered && (
             <Route path="/registration" element={<Registration />} />
           )}
-          {isUserRegistered ? (
-            <Route path="/login" element={<Login />} />
-          ) : (
-            <Route path="*" element={<NotFound />} /> // If user is not registered, show NotFound for any route
-          )}
+
+          {/* Conditional Rendering for Login Route */}
+          {isUserRegistered && <Route path="/login" element={<Login />} />}
 
           {/* Protect Profile Route */}
           <Route
@@ -58,14 +55,8 @@ function App() {
             element={isUserLoggedIn ? <Profile /> : <Navigate to="/login" />}
           />
 
-          <Route path="/profile" element={<Profile />} />
-          {/* <Route path="/registration" element={<Registration />} /> */}
-          <Route path="/publications" element={<Publications />} />
-          <Route path="/timeline" element={<Timeline/>} />
-
-
+          {/* Catch-all Route for NotFound */}
           <Route path="*" element={<NotFound />} />
-
         </Routes>
         <Footer />
       </Router>

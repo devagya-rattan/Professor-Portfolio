@@ -1,2 +1,3 @@
 export const USERS_ARRAY = "USERS_ARRAY"
 export const LOGIN_ARRAY = "LOGIN_ARRAY"
+export const CLEAR_USER_STATE = "CLEAR_USER_STATE"

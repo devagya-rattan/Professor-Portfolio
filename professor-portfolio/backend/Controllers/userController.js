@@ -1,57 +1,6 @@
 // import User from "../Models/userModel.js";
 // import bcrypt from "bcrypt";
 // import jsonwebtoken from "jsonwebtoken";
-
-// export const register = async (req, res) => {
-//   const { name, email, password } = req.body;
-//   try {
-//     const saltRounds = 10;
-//     const salt = await bcrypt.genSalt(saltRounds);
-//     const hashedPassword = await bcrypt.hash(password, salt);
-
-//     // Check if the user already exists
-//     const findUser = await User.findOne({ email });
-//     if (findUser) {
-//       return res.status(201).json({ message: "The user already exists" });
-//     }
-
-//     // Create a new user
-//     const userData = new User({ name, email, password: hashedPassword });
-//     const user = await userData.save();
-
-//     // Create the JWT payload
-//     const payload = {
-//       user: {
-//         id: user.id,
-//       },
-//     };
-
-//     // Generate the token
-//     jsonwebtoken.sign(
-//       payload,
-//       process.env.JWT_SECRET,
-//       { expiresIn: "10h" },
-//       async (err, token) => {
-//         if (err) {
-//           console.error(err.message);
-//           return res
-//             .status(500)
-//             .json({ message: "Server error in JWT secret" });
-//         }
-
-//         // Save the token to the user document
-//         user.token = token;
-//         await user.save();
-
-//         // Send the user data and token in the JSON response
-//         res.status(200).json({ user, token });
-//       }
-//     );
-//   } catch (error) {
-//     res.status(500).json({ error: error.message });
-//   }
-// };
-
 // export const loginUser = async (req, res) => {
 //   const { email, password } = req.body;
 //   try {
@@ -152,5 +101,40 @@ export const registerUser = async (req, res) => {
   } catch (error) {
     console.error("Error during user registration:", error);
     res.status(500).json({ message: "Error in server registration" });
+  }
+};
+
+export const fetchUser = async (req, res) => {
+  try {
+    const users = await prisma.user.findMany();
+    res.status(200).json(users);
+  } catch (error) {
+    res.status(500).json({ message: "Failed to fetch users data" });
+  }
+};
+
+export const loginUser = async (req, res) => {
+  const { email, password } = req.body;
+
+  try {
+    const findUser = await prisma.user.findUnique({ where: { email } });
+    if (!findUser) {
+      res.status(401).json({ message: "Invaild credentials!" });
+    }
+    const token = jsonwebtoken.sign(
+      { id: findUser.id },
+      process.env.JWT_SECRET,
+      {
+        expiresIn: "1h",
+      }
+    );
+    res
+      .status(200)
+      .json({
+        token,
+        user: { id: findUser.id, name: findUser.name, email: findUser.email },
+      });
+  } catch (error) {
+    res.status(500).json({ message: "Error in  server login" });
   }
 };

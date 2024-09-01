@@ -3,6 +3,8 @@ import colors from "colors";
 import { PrismaClient } from "@prisma/client";
 import { configDotenv } from "dotenv";
 import userRouter from "./Routes/userRouter.js";
+import fetchRouter from "./Routes/userRouter.js";
+import loginRouter from "./Routes/userRouter.js";
 import cors from "cors";
 const prisma = new PrismaClient();
 const app = express();
@@ -13,6 +15,8 @@ app.use(express.json());
 configDotenv();
 // conneting to the routes------------->>>>>>
 app.use("/api/users", userRouter);
+app.use("/api/fetch", fetchRouter);
+app.use("/api/login", loginRouter);
 // conneting to the port 8080
 app.listen(PORT, () => {
   console.log(` server is working on port ${PORT} `.bgBlack.white);

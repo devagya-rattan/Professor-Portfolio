@@ -10,20 +10,21 @@ function Login() {
   const userData = useSelector((state) => state.loginState);
   const dispatch = useDispatch();
   console.log(userData);
+  
   const loginForm = (e) => {
     e.preventDefault();
     try {
       axios
-        .post(`http://localhost:8080/api/users/login`, { email, password })
+        .post(`http://localhost:8080/api/login/loginusers`, { email, password })
         .then((response) => {
           alert("login successful!");
-          navigate("/profile")
+          // dispatch(userActions(userData));
+          navigate("/profile");
           dispatch(loginActions(email));
         })
         .catch((error) => {
           console.log(error);
         });
-      
     } catch (error) {
       console.log(error);
     }
